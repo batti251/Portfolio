@@ -1,1 +1,20 @@
-<p>header works!</p>
+<header>
+    <div class="initial-icon">
+        [SB]
+    </div>
+
+    <div class="side-container">
+        <div class="language-toggle">
+            <button type="button" [ngClass]="{'active': activeLanguage == 'en'}" (click)="setActiveStatus('en')">EN</button>
+            <button type="button" [ngClass]="{'active': activeLanguage == 'de'}" (click)="setActiveStatus('de')">DE</button>
+        </div>
+
+        <nav >
+            <ul>
+                <li><a href=""></a>About me</li>
+                <li><a href=""></a>My skills</li>
+                <li><a href=""></a>Portfolio</li>
+            </ul>
+        </nav>
+    </div>
+</header>

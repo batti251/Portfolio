@@ -1,0 +1,46 @@
+@import "../../../../styles.scss";
+
+header {
+  @include dFlex($jc: space-between);
+  @include padding($p: 30px 100px);
+  @include positionStyle($p: sticky);
+  max-width: 100%;
+  height: 92px;
+  width: 100vw;
+  box-sizing: border-box;
+
+  > .side-container {
+    @include dFlex($g: 64px);
+
+    > .initial-icon {
+      @include sizeStyle($h: 30px, $w: 66.67px);
+    }
+
+    > .language-toggle {
+      @include sizeStyle($h: 28px, $w: 88px);
+      @include dFlex();
+      > button {
+        @include sizeStyle($h: 28px, $w: 40px);
+      }
+    }
+
+    > nav {
+      background-image: url("/assets/img/header/header_burger.svg");
+      @include sizeStyle($h: 38px, $w: 40px);
+
+      > ul {
+        display: none;
+        > li {
+        }
+      }
+    }
+  }
+}
+
+.active {
+  @include borderStyle();
+}
+
+button {
+  border-style: none;
+}

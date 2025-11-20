@@ -49,16 +49,74 @@
 }
 
 $primary: #FFFCF3;
-$secundary: #000000;
+$secondary: #000000;
 $highlight: #FF9900;
 
 
 *{
     font-family: 'Overpass';
-    background-color: $primary  ;
+    background-color: $primary;
+    margin: 0;
+    padding: 0;
 }
 
 
 h1{
     font-family: 'Syne' !important;
+}
+
+
+@mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $g;
+}
+
+@mixin textStyle(){
+
+}
+
+@mixin margin($m: 0 0 0 0) {
+  margin: $m;
+}
+
+@mixin padding($p: 0 0 0 0) {
+  padding: $p;
+}
+
+@mixin fontStyle($fs: 24px, $fw: bold, $c: #000000, $td: none) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+  text-decoration: $td;
+}
+
+@mixin positionStyle($p: absolute, $t:0, $r:0, $b:0, $l:0){
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin sizeStyle($h: 64px, $w: 64px) {
+  height: $h;
+  width: $w;
+}
+
+@mixin backgroundStyle($url: "", $bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {
+  background-image: $url;
+  background-size: $bgs;
+  background-repeat: $bgr;
+  background-position: $bgp;
+  background-color: $bgc;
+}
+
+@mixin borderStyle($bs: solid, $br: 0, $bc: $highlight, $bw: 2px){
+  border-style: $bs;
+  border-radius: $br;
+  border-color: $bc;
+  border-width: $bw;
 }
