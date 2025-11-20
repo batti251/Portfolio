@@ -48,9 +48,16 @@
   src: url('assets/fonts/overpass-v19-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+$primary: #FFFCF3;
+$secundary: #000000;
+$highlight: #FF9900;
+
+
 *{
     font-family: 'Overpass';
+    background-color: $primary  ;
 }
+
 
 h1{
     font-family: 'Syne' !important;
