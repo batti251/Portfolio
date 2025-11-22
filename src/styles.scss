@@ -55,11 +55,21 @@ $highlight: #FF9900;
 
 *{
     font-family: 'Overpass';
-    background-color: $primary;
     margin: 0;
     padding: 0;
 }
 
+body {
+    background-color: $primary;
+}
+
+button{
+  background-color: $primary;
+  border-style: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
 
 h1{
     font-family: 'Syne' !important;
@@ -106,8 +116,7 @@ h1{
   width: $w;
 }
 
-@mixin backgroundStyle($url: "", $bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {
-  background-image: $url;
+@mixin backgroundStyle($bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {
   background-size: $bgs;
   background-repeat: $bgr;
   background-position: $bgp;
