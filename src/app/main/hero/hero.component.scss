@@ -1,0 +1,24 @@
+@import "../../../styles.scss";
+
+
+.hero {
+  @include dFlex($fd: column, $g: 16px);
+  @include padding(0 100px);
+
+  > h1 {
+    @include textStyle($ff: 'Syne', $fw: 800, $fst: bold, $fs: 128px);
+  }
+  > .name-container {
+    @include dFlex($g: 16px);
+    max-width: 100vw;
+    width: 100%;
+    > .line {
+      @include sizeStyle($h: 3px, $w: 50%);
+      @include borderStyle($br: 0.5rem, $bs: unset, $bc: unset);
+      background-color: $secondary;
+    }
+    > .name{
+        @include textStyle( $fw: 700, $fst: bold, $fs: 48px, $fc: $highlight);
+    }
+  }
+}

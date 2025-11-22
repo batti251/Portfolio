@@ -84,8 +84,15 @@ h1{
   gap: $g;
 }
 
-@mixin textStyle(){
-
+@mixin textStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $fst: normal, $fc:$secondary, $lh: 100%, $ls:-2.5%, $va: middle){
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  font-style: $fst;
+  color: $fc;
+  line-height: $lh;
+  letter-spacing: $ls;
+  vertical-align: $va;
 }
 
 @mixin margin($m: 0 0 0 0) {
@@ -111,9 +118,11 @@ h1{
   left: $l;
 }
 
-@mixin sizeStyle($h: 64px, $w: 64px) {
+@mixin sizeStyle($h: 64px, $w: 64px, $deg:0) {
   height: $h;
   width: $w;
+  transform: rotate($deg);
+
 }
 
 @mixin backgroundStyle($bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {

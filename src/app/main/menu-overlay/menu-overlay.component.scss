@@ -1,2 +1,18 @@
 @import "../../../styles.scss";
 
+ul {
+  height: 100vh;
+  @include dFlex($fd: column);
+
+  > a {
+    @include sizeStyle($h: 167px, $w: 580px);
+    @include textStyle($ff: 'Syne', $fs: 96px, $fw: 700);
+    text-decoration: none;
+    border-style: solid;
+    border: 0 0 4px 4px ;
+    border-color: black;
+    > li {
+      display: block;
+    }
+  }
+}
