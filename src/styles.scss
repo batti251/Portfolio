@@ -1,85 +1,87 @@
 /* syne-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
+  font-family: "Syne";
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/syne-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/syne-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* syne-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
+  font-family: "Syne";
   font-style: normal;
   font-weight: 700;
-  src: url('assets/fonts/syne-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/syne-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* syne-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Syne';
+  font-family: "Syne";
   font-style: normal;
   font-weight: 800;
-  src: url('assets/fonts/syne-v24-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/syne-v24-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* overpass-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
+  font-family: "Overpass";
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/overpass-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/overpass-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* overpass-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
+  font-family: "Overpass";
   font-style: normal;
   font-weight: 700;
-  src: url('assets/fonts/overpass-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/overpass-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* overpass-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Overpass';
+  font-family: "Overpass";
   font-style: normal;
   font-weight: 800;
-  src: url('assets/fonts/overpass-v19-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/overpass-v19-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-$primary: #FFFCF3;
+$primary: #fffcf3;
 $secondary: #000000;
-$highlight: #FF9900;
+$highlight: #ff9900;
+$error: #e61c40;
 
-
-*{
-    font-family: 'Overpass';
-    margin: 0;
-    padding: 0;
+* {
+  font-family: "Overpass";
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: $primary;
+  background-color: $primary;
 }
 
-button{
+button {
   background-color: $primary;
   border-style: none;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
+
+
 
 a {
   text-decoration: none;
   color: $secondary;
 }
 
-h1{
-    font-family: 'Syne' !important;
+h1 {
+  font-family: "Syne" !important;
 }
-
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0) {
   display: flex;
@@ -89,7 +91,16 @@ h1{
   gap: $g;
 }
 
-@mixin textStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $fst: normal, $fc:$secondary, $lh: 100%, $ls:-2.5%, $va: middle){
+@mixin textStyle(
+  $ff: "Overpass",
+  $fs: 16px,
+  $fw: 400,
+  $fst: normal,
+  $fc: $secondary,
+  $lh: 100%,
+  $ls: -2.5%,
+  $va: middle
+) {
   font-family: $ff;
   font-weight: $fw;
   font-size: $fs;
@@ -115,7 +126,7 @@ h1{
   text-decoration: $td;
 }
 
-@mixin positionStyle($p: absolute, $t:0, $r:0, $b:0, $l:0, $zi:0){
+@mixin positionStyle($p: absolute, $t: 0, $r: 0, $b: 0, $l: 0, $zi: 0) {
   position: $p;
   top: $t;
   right: $r;
@@ -124,23 +135,28 @@ h1{
   z-index: $zi;
 }
 
-@mixin sizeStyle($h: 64px, $w: 64px, $deg:0) {
+@mixin sizeStyle($h: 64px, $w: 64px, $deg: 0) {
   height: $h;
   width: $w;
   transform: rotate($deg);
-
 }
 
-@mixin backgroundStyle($bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc: unset) {
+@mixin backgroundStyle(
+  $bgs: cover,
+  $bgr: no-repeat,
+  $bgp: 50% 50%,
+  $bgc: unset
+) {
   background-size: $bgs;
   background-repeat: $bgr;
   background-position: $bgp;
   background-color: $bgc;
 }
 
-@mixin borderStyle($bs: solid, $br: 0, $bc: $highlight, $bw: 2px){
+@mixin borderStyle($bs: solid, $br: 0, $bc: $highlight, $bw: 2px) {
   border-style: $bs;
   border-radius: $br;
   border-color: $bc;
   border-width: $bw;
 }
+

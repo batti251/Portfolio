@@ -1,1 +1,54 @@
-<p>footer works!</p>
+  <footer>
+    <div class="greeting">
+    <h3>Say Hi!</h3>
+    </div>
+    <div>
+        <span></span>
+        <span>Let's get in contact!</span>
+    </div>
+
+    <form [ngClass]="{'hide': router.url == '/menu'}">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Your name</mat-label>
+          <input matInput placeholder="" />
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Your email</mat-label>
+          <input matInput type="email" placeholder="you@example.com" />
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Your message</mat-label>
+          <textarea matInput placeholder="Happy to hear from you"></textarea>
+        </mat-form-field>
+      </p>
+      <p class="checkbox-caption">
+      <mat-checkbox class="checkbox"></mat-checkbox>
+         I've read the <a href="" class="text-highlight">privacy policy</a> and agree to processingg of
+        my data as outlined
+        </p>
+    </form>
+
+
+
+<mat-card class="footer-card">
+<mat-card-content class="wrap-copyright">
+    <a href="#"><img src="" alt="own Logo"></a> <br>
+    &copy; Sebastian Bünz 2025
+</mat-card-content>
+    
+  <mat-card-content class="external-links">
+    <a target="_blank" href="https://github.com/batti251"><img src="../../../../assets/img/footer/footer_icon_github.svg" alt=""></a>
+    <a href="mailto:bastibuenz25@gmail.com"><img src="../../../../assets/img/footer/footer_icon_mail.svg" alt=""></a>
+    <a target="_blank" href="https://linkedin.com/in/sebastian-bünz-606003212"><img src="../../../../assets/img/footer/footer_icon_linkedin.svg" alt=""></a>
+  </mat-card-content>
+</mat-card>
+
+
+  </footer>

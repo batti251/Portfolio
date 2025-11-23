@@ -1,0 +1,118 @@
+@import "../../../../styles.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer {
+  @include backgroundStyle($bgc: $secondary);
+  @include sizeStyle($h: 100%, $w: 100%);
+  max-height: 600px;
+  @include dFlex($fd: column);
+  padding: 100px 0 0 0;
+  clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 0px));
+
+  > form {
+    @include dFlex($fd: column);
+    @include sizeStyle($h: 490px, $w: 100%);
+    max-width: 600px;
+  }
+}
+
+.greeting {
+  padding: 0 340px 0 0;
+  > h3 {
+    @include textStyle($ff: "Syne", $fs: 3rem, $fw: 800);
+    color: #fffcf3;
+  }
+}
+
+.mat-mdc-form-field {
+  width: 600px;
+  --mdc-outlined-text-field-focus-outline-color: #ff9900;
+  --mdc-outlined-text-field-caret-color: #ff9900;
+  --mdc-outlined-text-field-label-text-color: #ff9900;
+  --mdc-outlined-text-field-hover-label-text-color: #ff9900;
+  --mdc-outlined-text-field-focus-label-text-color: #ff9900;
+}
+
+.footer-card {
+  @include backgroundStyle($bgc: $secondary);
+  @include dFlex($jc: space-between);
+  width: 100%;
+  @include textStyle($fc: #fffcf3);
+
+  > .wrap-copyright {
+    @include dFlex($g: 16px, $fd: column, $ai: flex-start);
+    @include sizeStyle($h: unset, $w: 250px);
+    @include textStyle($fc: #fffcf3, $fw: 400, $fs: 1.375rem);
+    > a {
+      @include textStyle($fc: #fffcf3, $fw: 400, $fs: 1.375rem);
+    }
+  }
+
+  > .external-links {
+    @include dFlex($g: 16px);
+  }
+}
+
+textarea {
+  max-height: 180px;
+}
+input {
+  height: 100px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.text-highlight {
+  color: #ff9900;
+}
+
+.checkbox-caption {
+  color: #fffcf3;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .mat-mdc-form-field, .checkbox-caption {
+    width: 500px;
+  }
+
+  .greeting {
+    padding: 0 240px 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mat-mdc-form-field {
+    width: 400px;
+  }
+
+  .footer-card{
+    flex-direction: column-reverse;
+  }
+
+  .checkbox-caption {
+    width: 400px;
+  }
+
+  .greeting {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mat-mdc-form-field {
+    width: 280px;
+  }
+
+  .checkbox-caption {
+    font-size: 1rem;
+    width: 300px;
+  }
+}
