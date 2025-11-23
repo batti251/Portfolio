@@ -2,10 +2,11 @@
   <div class="initial-icon">[SB]</div>
 
   <div class="side-container">
-    <div class="language-toggle">
+    <div class="language-toggle"
+    [ngClass]="{'show': router.url == '/menu'}">
       <button
         type="button"
-        [ngClass]="{'active': activeLanguage == 'en' }"
+        [ngClass]="{'active': activeLanguage == 'en'}"
         (click)="setActiveStatus('en')"
       >
         EN

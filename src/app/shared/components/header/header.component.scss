@@ -39,6 +39,7 @@ header {
 }
 
 
+
 .animation-pause {
   animation: none !important;
 }
@@ -90,3 +91,16 @@ header {
   }
 }
 
+
+@media screen and (max-width: 600px) {
+  header{
+    padding: 0 30px;
+  }
+  .language-toggle{
+    display: none !important;
+  }
+}
+
+.show{
+  display: flex !important;
+}
