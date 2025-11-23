@@ -3,7 +3,6 @@
 header {
   @include dFlex($jc: space-between);
   @include padding($p: 30px 100px);
-  @include positionStyle($p: sticky);
   max-width: 100%;
   height: 92px;
   width: 100vw;
