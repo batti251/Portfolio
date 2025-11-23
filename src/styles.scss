@@ -71,6 +71,11 @@ button{
   }
 }
 
+a {
+  text-decoration: none;
+  color: $secondary;
+}
+
 h1{
     font-family: 'Syne' !important;
 }
@@ -110,12 +115,13 @@ h1{
   text-decoration: $td;
 }
 
-@mixin positionStyle($p: absolute, $t:0, $r:0, $b:0, $l:0){
+@mixin positionStyle($p: absolute, $t:0, $r:0, $b:0, $l:0, $zi:0){
   position: $p;
   top: $t;
   right: $r;
   bottom: $b;
   left: $l;
+  z-index: $zi;
 }
 
 @mixin sizeStyle($h: 64px, $w: 64px, $deg:0) {
@@ -125,7 +131,7 @@ h1{
 
 }
 
-@mixin backgroundStyle($bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {
+@mixin backgroundStyle($bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc: unset) {
   background-size: $bgs;
   background-repeat: $bgr;
   background-position: $bgp;
