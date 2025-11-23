@@ -5,14 +5,70 @@ ul {
   @include dFlex($fd: column);
 
   > a {
+    @include dFlex();
     @include sizeStyle($h: 167px, $w: 580px);
-    @include textStyle($ff: 'Syne', $fs: 96px, $fw: 700);
+    @include textStyle($ff: "Syne", $fs: 96px, $fw: 700);
     text-decoration: none;
-    border-style: solid;
-    border: 0 0 4px 4px ;
-    border-color: black;
+
     > li {
       display: block;
     }
   }
 }
+
+.border-left {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3%;
+    width: 20%;
+    background: black;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 95px;
+    left: 0;
+    height: 40%;
+    width: 5px;
+    background: black;
+  }
+
+  &:hover::before {
+    animation: expandLeft 0.5s forwards;
+    animation-delay: 0.22s;
+  }
+  &:hover::after {
+    animation: decreaseDown 0.25s forwards;
+  }
+}
+
+
+
+@keyframes expandLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(150%);
+    width: 40%;
+    background: $highlight;
+  }
+}
+
+@keyframes decreaseDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    top: 167px;
+    height: 0;
+  }
+}
+
