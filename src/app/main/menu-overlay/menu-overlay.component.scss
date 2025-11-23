@@ -7,7 +7,7 @@ ul {
   > a {
     @include dFlex();
     @include sizeStyle($h: 167px, $w: 580px);
-    @include textStyle($ff: "Syne", $fs: 96px, $fw: 700);
+    @include textStyle($ff: "Syne", $fs: 6rem, $fw: 700);
     text-decoration: none;
 
     > li {
@@ -48,8 +48,6 @@ ul {
   }
 }
 
-
-
 @keyframes expandLeft {
   0% {
     transform: translateX(0);
@@ -67,8 +65,38 @@ ul {
     transform: translateY(0);
   }
   100% {
-    top: 167px;
+     top: 100%;
     height: 0;
   }
 }
 
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  a {
+    font-size: 5rem !important;
+    width: 500px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  a {
+    font-size: 4rem !important;
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  a {
+    height: 120px !important;
+    font-size: 2.5rem !important;
+    width: 270px !important;
+  }
+  .border-left:after {
+    top: 68px;
+  }
+}
