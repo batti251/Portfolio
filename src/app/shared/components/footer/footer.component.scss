@@ -24,7 +24,7 @@ footer {
 .greeting {
   padding: 0 340px 0 0;
   > h3 {
-    @include textStyle($ff: "Syne", $fs: 3rem, $fw: 800);
+    @include textStyle($ff: "Syne", $fs: 4.875rem, $fw: 800);
     color: #fffcf3;
   }
 }

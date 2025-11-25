@@ -1,0 +1,85 @@
+@import "./../../../styles.scss";
+
+section {
+  @include sizeStyle($h: 100%, $w: 90%);
+  @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
+  > h2 {
+    @include textStyle($fs: 5rem, $ff: "Syne", $fw: 800, $ls: 1%);
+  }
+
+  >.introduction {
+    @include dFlex($g: 32px, $ai: center, $jc: center);
+    > article {
+      @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
+      @include sizeStyle($h: 100%, $w: 50%);
+      @include textStyle($fs: 1.375rem, $lh: 120%);
+
+      > ul {
+        @include dFlex($g: 16px, $fd: column, $ai: unset, $jc: unset);
+        > li {
+          @include dFlex($g: 8px, $jc: unset);
+        }
+      }
+    }
+    > figure {
+        @include dFlex();
+        >img{
+            @include sizeStyle($h: 500px, $w: 533px);
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+    article{
+        font-size: 1.25rem !important;
+    }
+}
+
+
+
+@media screen and (max-width: 920px) {
+    article{
+        width: 90% !important;
+    }
+    
+    .introduction{
+        flex-direction: column !important;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 600px) {
+
+    figure{
+        > img {
+            width: 349px !important;
+        }
+    }
+
+    h2{
+        font-size: 2.25rem !important;
+    }
+
+    img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    figure{
+        > img {
+            width: 260px !important;
+        }
+    }
+}
