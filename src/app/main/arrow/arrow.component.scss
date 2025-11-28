@@ -1,0 +1,30 @@
+section{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 100px;
+
+    > img{
+        height: 215.25px;
+        width: 116.85px;
+    }
+
+    &.reversed{
+       flex-direction: row; 
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+section{
+    padding: 0 50px;
+}
+
+@media screen and (max-width: 420px) {
+section{
+    padding: 0 20px;
+}
+
+}
+}
