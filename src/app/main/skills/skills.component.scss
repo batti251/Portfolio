@@ -1,0 +1,68 @@
+@import "./../../../styles.scss";
+
+h2 {
+  @include textStyle($ff: "Syne", $fs: 78px, $fw: 800);
+  @include positionStyle($p: relative, $t: 44px, $zi: 1);
+  @include padding($p: 10px);
+  background-color: $primary;
+}
+
+section {
+  @include borderStyle($bc: $secondary, $bw: 4px);
+  @include sizeStyle($h: unset, $w: 80%);
+  @include padding($p: 80px 40px);
+  @include dFlex($fd: column, $g: 24px);
+
+  > .icon-list {
+    @include dFlex($g: 96px);
+    flex-wrap: wrap;
+
+    > .icon {
+      @include sizeStyle($h: 104px, $w: 100px);
+      @include dFlex($fd: column, $g: 10px);
+      > img {
+        @include sizeStyle($h: 75px, $w: 70px);
+      }
+      > span {
+        @include textStyle($fw: 700, $lh: 120%);
+      }
+    }
+  }
+  > .continue_learning {
+    @include dFlex($fd: column, $g: 8px);
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem !important;
+    top: 30px !important;
+  }
+
+  .icon-list {
+    gap: 64px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2.25rem !important;
+  }
+
+  section{
+    padding: 30px 20px !important;
+  }
+
+  .icon-list {
+    gap: 32px !important;
+  }
+  .icon {
+    height: 89px !important;
+    width: 85.71px !important;
+    > img {
+      height: 60px !important;
+      width: 55.8px !important;
+    }
+  }
+}

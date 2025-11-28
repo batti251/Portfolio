@@ -9,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  
+skills: string[] = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Angular",
+  "TypeScript",
+  "Git",
+  "Firebase",
+  "Rest-Api",
+  "Scrum",
+  "SQL"
+]
+
+
 }

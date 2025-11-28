@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<h2>My skills</h2>
+<section>
+    <div class="icon-list">
+    @for (item of skills; track $index) {
+        <div class="icon">
+        <img src='./../../../assets/img/skills/icon_{{item}}.svg' alt="">
+        <span>{{item}}</span>
+        </div>
+    } 
+    </div>
+    <div class="continue_learning">
+        <img src="./../../../assets/img/skills/icon_continued_learning.svg" alt="">
+        <span>My Road is not finished.</span>
+        <span>It just started! </span> </div>
+</section>  
