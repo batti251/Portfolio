@@ -12,12 +12,12 @@
     <span class="counter"
         ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
       >
-    <img [src]="item.imgsrc" alt="" />
+    <img [src]="item.imgsrc" alt=""/>
     <aside>
       <span class="aside-counter"
         ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
       >
-      <div class="project-info">
+      <div class="project-info none">
         <h3>{{ item.title }}</h3>
         <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
         <span class="project-description"> {{ item.description }}</span>

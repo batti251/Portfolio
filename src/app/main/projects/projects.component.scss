@@ -7,11 +7,13 @@ section {
     > .counter {
       display: none;
     }
-    @include dFlex($g: 80px);
+    @include dFlex($g: 40px);
     > img {
       @include sizeStyle($h: auto, $w: 620px);
       max-width: 100%;
       inline-size: auto;
+
+      padding: 0px 50px 42px 0px;
     }
     > aside {
       @include dFlex($fd: column, $ai: start, $jc: start, $g: 10px);
@@ -27,6 +29,15 @@ section {
         }
       }
     }
+    &:hover .project-info {
+      display: flex !important;
+      transition: 400ms;
+      animation: swishFromLeft 0.5s forwards;
+    }
+    &:hover img {
+      outline: 4px black solid;
+      outline-offset: -32px;
+    }
   }
 }
 
@@ -38,7 +49,6 @@ section {
   @include textStyle($fs: 23px, $lh: 120%);
   @include padding($p: 20px 40px);
   @include sizeStyle($h: 68px, $w: 149px);
-
   &:hover {
     filter: brightness(1);
     box-shadow: 0px 0px 12px 4px $highlight;
@@ -47,8 +57,12 @@ section {
   }
 }
 
+.none {
+  display: none !important;
+}
+
 @media screen and (max-width: 1080px) {
-  .aside{
+  .aside {
     width: 280px !important;
   }
 }
@@ -56,6 +70,10 @@ section {
 @media screen and (max-width: 992px) {
   .project-list {
     gap: 20px !important;
+    > img {
+      height: 340px !important;
+      width: auto;
+    }
   }
 }
 
@@ -68,27 +86,102 @@ section {
       width: 100%;
       justify-content: end;
     }
-
+    > img {
+      height: 360px !important;
+      width: unset !important;
+    }
     > aside {
       height: 260px !important;
       gap: 0 !important;
-      width: 100% !important;
+      /*   width: 100% !important; */
       > .aside-counter {
         display: none !important;
       }
+    }
+    &:hover .project-info {
+      animation: swishFromTop 0.5s forwards !important;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-
   aside {
     gap: 0 !important;
     height: 0 !important;
   }
 }
 
+@media screen and (max-width: 660px) {
+  .project-list {
+    > img {
+      height: 300px !important;
+    }
+    > aside {
+      width: 220px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .project-list {
+    > img {
+      height: 260px !important;
+      padding: 0px 32px 50px 0px !important;
+      outline-offset: -24px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project-list {
+    > img {
+      height: 240px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .project-list {
+    > img {
+      height: 200px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project-list {
+    > img {
+      height: 180px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .project-list {
+    > img {
+      height: 160px !important;
+    }
+  }
+}
 
 span[class$="counter"] {
-  @include textStyle($ff:'Syne' !important, $fw: 700, $lh: 120%, $fs: 3rem);
+  @include textStyle($ff: "Syne" !important, $fw: 700, $lh: 120%, $fs: 3rem);
+}
+
+@keyframes swishFromLeft {
+  0% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swishFromTop {
+  0% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
