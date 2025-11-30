@@ -72,8 +72,6 @@ button {
   }
 }
 
-
-
 a {
   text-decoration: none;
   color: $secondary;
@@ -160,3 +158,12 @@ h1 {
   border-width: $bw;
 }
 
+.title {
+  @include dFlex($g: 16px, $fd: column);
+  > h2 {
+    @include textStyle($fw: 800, $fs: 3rem);
+  }
+  > span {
+    text-align: center;
+  }
+}

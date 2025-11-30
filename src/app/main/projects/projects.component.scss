@@ -1,0 +1,94 @@
+@import "./../../../styles.scss";
+
+section {
+  @include dFlex($g: 48px, $fd: column);
+  @include padding($p: 0px 10px);
+  > .project-list {
+    > .counter {
+      display: none;
+    }
+    @include dFlex($g: 80px);
+    > img {
+      @include sizeStyle($h: auto, $w: 620px);
+      max-width: 100%;
+      inline-size: auto;
+    }
+    > aside {
+      @include dFlex($fd: column, $ai: start, $jc: start, $g: 10px);
+      @include sizeStyle($h: 390px, $w: 320px);
+      > .project-info {
+        @include dFlex($fd: column, $ai: unset, $g: 8px);
+
+        > h3 {
+          @include textStyle($ff: "Syne", $fw: 800, $fs: 2rem, $lh: 120%);
+        }
+        > .project-skills {
+          @include textStyle($fs: 1.25rem, $lh: 120%, $fc: $highlight);
+        }
+      }
+    }
+  }
+}
+
+.mat-mdc-outlined-button {
+  border-color: $secondary;
+  border-radius: 0;
+  color: $secondary;
+  border-width: 4px;
+  @include textStyle($fs: 23px, $lh: 120%);
+  @include padding($p: 20px 40px);
+  @include sizeStyle($h: 68px, $w: 149px);
+
+  &:hover {
+    filter: brightness(1);
+    box-shadow: 0px 0px 12px 4px $highlight;
+    color: $highlight;
+    border-color: $highlight;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .aside{
+    width: 280px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .project-list {
+    gap: 20px !important;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .project-list {
+    flex-direction: column !important;
+    gap: 10px !important;
+    > .counter {
+      display: flex !important;
+      width: 100%;
+      justify-content: end;
+    }
+
+    > aside {
+      height: 260px !important;
+      gap: 0 !important;
+      width: 100% !important;
+      > .aside-counter {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  aside {
+    gap: 0 !important;
+    height: 0 !important;
+  }
+}
+
+
+span[class$="counter"] {
+  @include textStyle($ff:'Syne' !important, $fw: 700, $lh: 120%, $fs: 3rem);
+}

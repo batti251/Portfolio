@@ -1,1 +1,31 @@
-<p>projects works!</p>
+<section>
+  <div class="title">
+    <h2>Portfolio</h2>
+    <span>
+      Explore a selection of my work here - <br />
+      Interact with project to see my skills in action</span
+    >
+  </div>
+
+  @for (item of projects; track $index) {
+  <div class="project-list">
+    <span class="counter"
+        ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
+      >
+    <img [src]="item.imgsrc" alt="" />
+    <aside>
+      <span class="aside-counter"
+        ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
+      >
+      <div class="project-info">
+        <h3>{{ item.title }}</h3>
+        <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
+        <span class="project-description"> {{ item.description }}</span>
+        <span>
+          <a mat-stroked-button [href]="item.url" target="_blank"><strong>GitHub</strong></a></span
+        >
+      </div>
+    </aside>
+  </div>
+  }
+</section>

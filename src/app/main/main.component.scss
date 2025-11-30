@@ -14,3 +14,7 @@ app-about-me {
 app-skills {
     @include dFlex($fd: column);
 }
+
+app-projects {
+    @include dFlex($fd: column);
+}
