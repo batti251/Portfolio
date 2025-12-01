@@ -8,18 +8,18 @@
   </div>
 
   @for (item of projects; track $index) {
-  <div class="project-list">
+  <div class="project-list" [class.reversed]="$odd">
     <span class="counter"
         ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
       >
-      <div class="img-wrapper">
+      <div class="img-wrapper" [class.mirrored]="$odd">
     <img [src]="item.imgsrc" alt=""/>
     </div>
     <aside>
       <span class="aside-counter"
         ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
       >
-      <div class="project-info none">
+      <div class="project-info none" [class.reverse-animation]="$odd">
         <h3>{{ item.title }}</h3>
         <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
         <span class="project-description"> {{ item.description }}</span>

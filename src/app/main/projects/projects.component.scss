@@ -16,7 +16,8 @@ section {
         max-width: 100%;
         inline-size: auto;
         padding: 0px 50px 42px 0px;
-        
+        outline: 4px black solid;
+        outline-offset: -32px;
       }
 
       &::after {
@@ -25,9 +26,12 @@ section {
         @include sizeStyle($h: 75.7px, $w: 75.7px);
         background-image: url("./../../../assets/img/arrow/arrow_border.svg");
         @include backgroundStyle($bgr: no-repeat, $bgs: contain, $bgp: center);
-
         transition: transform 0.475s ease;
-        transform: translateY(-50%) rotate(0deg) scale(0);
+        transform: translateY(-50%) rotate(0deg) scale(1);
+      }
+      &.mirrored::after{
+          content: "";
+          @include positionStyle($t: 50%, $r: unset, $l: -8px, $b: unset);
       }
     }
 
@@ -36,7 +40,6 @@ section {
       @include sizeStyle($h: 390px, $w: 240px);
       > .project-info {
         @include dFlex($fd: column, $ai: unset, $g: 8px);
-
         > h3 {
           @include textStyle($ff: "Syne", $fw: 800, $fs: 2rem, $lh: 120%);
         }
@@ -47,16 +50,23 @@ section {
     }
     &:hover .project-info {
       display: flex !important;
-      transition: 400ms;
       animation: swishFromLeft 0.5s forwards;
     }
+
+    &:hover .reverse-animation {
+      display: flex !important;
+      animation: swishFromRight 0.5s forwards;
+    }
+
     &:hover img {
       outline: 4px black solid;
       outline-offset: -32px;
-
     }
     &:hover .img-wrapper::after {
       transform: translateY(-50%) rotate(135deg) scale(1) !important;
+    }
+    &:hover .mirrored::after {
+      transform: translateY(-50%) rotate(-135deg) scale(1) !important;
     }
   }
 }
@@ -79,6 +89,10 @@ section {
 
 .none {
   display: none !important;
+}
+
+.reversed {
+  flex-direction: row-reverse !important;
 }
 
 @media screen and (max-width: 1080px) {
@@ -224,5 +238,14 @@ span[class$="counter"] {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes swishFromRight {
+  0% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
