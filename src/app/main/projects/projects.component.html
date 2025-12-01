@@ -13,7 +13,8 @@
         ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
       >
       <div class="img-wrapper" [class.mirrored]="$odd">
-    <img [src]="item.imgsrc" alt=""/>
+    <!-- <img [src]="item.imgsrc" alt=""/> -->
+     <iframe [src]="videoUrls[$index]" width="800px" height="600px" frameborder="0"></iframe>
     </div>
     <aside>
       <span class="aside-counter"
