@@ -10,14 +10,11 @@ section {
     @include dFlex($g: 40px);
     > .img-wrapper {
       position: relative;
-
-      > img {
-        @include sizeStyle($h: auto, $w: 620px);
+   
+      > iframe {
+        @include sizeStyle($h: 600px, $w: 800px);
         max-width: 100%;
-        inline-size: auto;
         padding: 0px 50px 42px 0px;
-        outline: 4px black solid;
-        outline-offset: -32px;
       }
 
       &::after {
@@ -58,7 +55,7 @@ section {
       animation: swishFromRight 0.5s forwards;
     }
 
-    &:hover img {
+    &:hover iframe {
       outline: 4px black solid;
       outline-offset: -32px;
     }
@@ -105,7 +102,7 @@ section {
   .project-list {
     gap: 20px !important;
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 340px !important;
         width: auto;
       }
@@ -123,7 +120,7 @@ section {
       justify-content: end;
     }
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 360px !important;
         width: unset !important;
       }
@@ -151,7 +148,7 @@ section {
 @media screen and (max-width: 660px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 300px !important;
       }
     }
@@ -164,7 +161,7 @@ section {
 @media screen and (max-width: 580px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 260px !important;
         padding: 0px 32px 50px 0px !important;
         outline-offset: -24px !important;
@@ -181,7 +178,7 @@ section {
 @media screen and (max-width: 500px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 240px !important;
       }
     }
@@ -191,7 +188,7 @@ section {
 @media screen and (max-width: 460px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 200px !important;
       }
     }
@@ -201,7 +198,7 @@ section {
 @media screen and (max-width: 400px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 180px !important;
       }
     }
@@ -211,7 +208,7 @@ section {
 @media screen and (max-width: 360px) {
   .project-list {
     > .img-wrapper {
-      > img {
+      > iframe {
         height: 160px !important;
         padding: 0px 26px 50px 0px !important;
       }
