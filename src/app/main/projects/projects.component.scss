@@ -10,9 +10,10 @@ section {
     @include dFlex($g: 40px);
     > .img-wrapper {
       position: relative;
-   
-      > iframe {
-        @include sizeStyle($h: 600px, $w: 800px);
+      filter: brightness(0.02);
+         
+      > .preview {
+        @include sizeStyle($h: 600px, $w: 720px);
         max-width: 100%;
         padding: 0px 50px 42px 0px;
       }
@@ -24,11 +25,11 @@ section {
         background-image: url("./../../../assets/img/arrow/arrow_border.svg");
         @include backgroundStyle($bgr: no-repeat, $bgs: contain, $bgp: center);
         transition: transform 0.475s ease;
-        transform: translateY(-50%) rotate(0deg) scale(1);
+        transform: translateY(-50%) rotate(0deg) scale(0);
       }
-      &.mirrored::after{
-          content: "";
-          @include positionStyle($t: 50%, $r: unset, $l: -8px, $b: unset);
+      &.mirrored::after {
+        content: "";
+        @include positionStyle($t: 50%, $r: unset, $l: -8px, $b: unset);
       }
     }
 
@@ -43,6 +44,9 @@ section {
         > .project-skills {
           @include textStyle($fs: 1.25rem, $lh: 120%, $fc: $highlight);
         }
+        > .external-links {
+          @include dFlex($g: 16px, $fd: column);
+        }
       }
     }
     &:hover .project-info {
@@ -55,10 +59,15 @@ section {
       animation: swishFromRight 0.5s forwards;
     }
 
-    &:hover iframe {
+    &:hover .preview {
       outline: 4px black solid;
       outline-offset: -32px;
     }
+    &:hover .img-wrapper {
+      filter: brightness(1);
+      transition: 1s ease-out;
+    }
+
     &:hover .img-wrapper::after {
       transform: translateY(-50%) rotate(135deg) scale(1) !important;
     }
@@ -93,8 +102,12 @@ section {
 }
 
 @media screen and (max-width: 1080px) {
-  .aside {
-    width: 280px !important;
+  .project-list {
+    > .img-wrapper {
+      > .preview {
+        width: 636px !important;
+      }
+    }
   }
 }
 
@@ -102,8 +115,9 @@ section {
   .project-list {
     gap: 20px !important;
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 340px !important;
+        width: 540px !important;
         width: auto;
       }
     }
@@ -120,9 +134,9 @@ section {
       justify-content: end;
     }
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 360px !important;
-        width: unset !important;
+        /* width: unset !important; */
       }
     }
     > aside {
@@ -130,6 +144,11 @@ section {
       gap: 0 !important;
       > .aside-counter {
         display: none !important;
+      }
+      > .project-info {
+        > .external-links {
+          flex-direction: row !important;
+        }
       }
     }
     &:hover .project-info {
@@ -148,8 +167,9 @@ section {
 @media screen and (max-width: 660px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 300px !important;
+        width: 460px !important;
       }
     }
     > aside {
@@ -161,8 +181,9 @@ section {
 @media screen and (max-width: 580px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 260px !important;
+        width: 440px !important;
         padding: 0px 32px 50px 0px !important;
         outline-offset: -24px !important;
       }
@@ -178,8 +199,9 @@ section {
 @media screen and (max-width: 500px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 240px !important;
+        width: 400px !important;
       }
     }
   }
@@ -188,18 +210,25 @@ section {
 @media screen and (max-width: 460px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 200px !important;
+        width: 320px !important;
       }
     }
+  }
+
+  .mat-mdc-outlined-button{
+    height: 60px !important;
+    width: 120px !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 180px !important;
+        width: 280px !important;
       }
     }
   }
@@ -208,11 +237,18 @@ section {
 @media screen and (max-width: 360px) {
   .project-list {
     > .img-wrapper {
-      > iframe {
+      > .preview {
         height: 160px !important;
+        width: 250px !important;
         padding: 0px 26px 50px 0px !important;
       }
     }
+  }
+
+    .mat-mdc-outlined-button{
+    height: 50px !important;
+    width: 100px !important;
+    font-size: 19px !important;
   }
 }
 

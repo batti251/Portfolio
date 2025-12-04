@@ -1,24 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, CommonModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit{
   videoUrls: SafeResourceUrl[] = [];
+  public screenWidth: any;
+
 
  constructor(private sanitizer: DomSanitizer) {
   this.videoUrls = this.projects.map(p =>
     this.sanitizer.bypassSecurityTrustResourceUrl(p.url)
   );
 }
-
-
+ngOnInit() {
+      this.screenWidth = window.innerWidth;
+}
+ @HostListener('window:resize')
+  onResize() {
+    this.screenWidth = window.innerWidth;
+  }
 
 
   projects = [{
