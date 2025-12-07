@@ -31,7 +31,7 @@ ngOnInit() {
 
   projects = [{
     title: 'Join',
-    description: 'A Kanban System, to organize tasks adsfjöhfgödosaugjhgf aasdf uigoh dsouaj güoa sdfogh üoiuadfs üash gisdhg pasuohg aosid ghasiodpghj asölajsdh g asowithin a Team',
+    descriptionEN: 'A Group-Project implementing a Kanban System, supported by Google-Firebase, to organize tasks within a Team. Add tasks, assign certain users to it and make sure to follow the Deadlines',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
     imgsrc: './../../../assets/img/thumbnail/join.svg',
     git: 'https://github.com/batti251/Join',
@@ -39,7 +39,7 @@ ngOnInit() {
   },
   {
     title: 'Sharkie',
-    description: 'A 2D-Browser Game',
+    descriptionEN: 'Object-Orientated 2D-Browser Game. Move Sharkie through the Deep Sea and face different Enemies.',
     skills: ['JavaScript', 'HTML', 'CSS',],
     imgsrc: './../../../assets/img/thumbnail/sharkie.svg',
     git: 'https://github.com/batti251/Sharkie',
@@ -47,7 +47,7 @@ ngOnInit() {
   },
   {
     title: 'Pokedex',
-    description: 'A Pokemon Library based on the PokéAPI. ',
+    descriptionEN: 'A Pokemon Library based on the PokéAPI. ',
     skills: ['JavaScript', 'HTML', 'CSS', 'API'],
     imgsrc: './../../../assets/img/thumbnail/pokedex.svg',
     git: 'https://github.com/batti251/Pokedex',

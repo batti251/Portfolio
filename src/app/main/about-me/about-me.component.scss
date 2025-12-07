@@ -8,14 +8,15 @@ section {
   }
 
   >.introduction {
-    @include dFlex($g: 32px, $ai: center, $jc: center);
+    @include dFlex($g: 32px, $ai: flex-start, $jc: center);
     > article {
-      @include dFlex($fd: column, $g: 24px, $ai: unset, $jc: unset);
+      @include dFlex($fd: column, $g: 24px, $ai: center, $jc: unset);
       @include sizeStyle($h: 100%, $w: 50%);
       @include textStyle($fs: 1.375rem, $lh: 120%);
 
       > ul {
         @include dFlex($g: 16px, $fd: column, $ai: unset, $jc: unset);
+        @include sizeStyle($h: 100% ,$w: 100%);
         > li {
           @include dFlex($g: 8px, $jc: unset);
         }
@@ -24,7 +25,7 @@ section {
     > figure {
         @include dFlex();
         >img{
-            @include sizeStyle($h: 500px, $w: 533px);
+            @include sizeStyle($h: 560px, $w: 533px);
             object-fit: contain;
             object-position: center;
         }
@@ -34,8 +35,11 @@ section {
 
 
 @media screen and (max-width: 992px) {
+    .introduction{
+        align-items: center !important;
     article{
         font-size: 1.25rem !important;
+    }
     }
 }
 
@@ -59,6 +63,7 @@ section {
 
     figure{
         > img {
+            height: 460px !important;
             width: 349px !important;
         }
     }
@@ -77,6 +82,7 @@ section {
 
     figure{
         > img {
+            height: 360px !important;
             width: 260px !important;
         }
     }
