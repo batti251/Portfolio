@@ -4,13 +4,13 @@ section {
   @include sizeStyle($h: 100%, $w: 90%);
   @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
   > h2 {
-    @include textStyle($fs: 5rem, $ff: "Syne", $fw: 800, $ls: 1%);
+    @include textStyle($fs: 5rem, $ff: "Syne", $fw: 800);
   }
 
   >.introduction {
     @include dFlex($g: 32px, $ai: center, $jc: center);
     > article {
-      @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
+      @include dFlex($fd: column, $g: 24px, $ai: unset, $jc: unset);
       @include sizeStyle($h: 100%, $w: 50%);
       @include textStyle($fs: 1.375rem, $lh: 120%);
 
