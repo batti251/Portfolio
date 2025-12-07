@@ -10,10 +10,19 @@
   @for (item of projects; track $index) {
   <div class="project-list" [class.reversed]="$odd">
     <span class="counter"
-        ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
-      >
-      <div class="img-wrapper" [class.mirrored]="$odd">
-    <img [src]="item.imgsrc" alt=""/>
+      ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
+    >
+    <div class="img-wrapper" [class.mirrored]="$odd">
+      @if (screenWidth > 1024) {
+      <iframe
+        class="preview"
+        [src]="videoUrls[$index]"
+        frameborder="0"
+        [title]="'embedded website from: ' + item.title"
+      ></iframe>
+      } @else {
+      <img class="preview" [src]="item.imgsrc" alt="" />
+      }
     </div>
     <aside>
       <span class="aside-counter"
@@ -23,8 +32,13 @@
         <h3>{{ item.title }}</h3>
         <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
         <span class="project-description"> {{ item.description }}</span>
-        <span>
-          <a mat-stroked-button [href]="item.url" target="_blank"><strong>GitHub</strong></a></span
+        <span class="external-links">
+          <a mat-stroked-button [href]="item.git" target="_blank"
+            ><strong>GitHub</strong></a
+          >
+          <a mat-stroked-button [href]="item.url" target="_blank"
+            ><strong>Link</strong></a
+          ></span
         >
       </div>
     </aside>

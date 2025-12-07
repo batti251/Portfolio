@@ -7,13 +7,13 @@ header {
   height: 92px;
   width: 100vw;
   box-sizing: border-box;
-
-  > .side-container {
-    @include dFlex($g: 64px);
-
-    > .initial-icon {
+  > .initial-icon {
+    > img {
       @include sizeStyle($h: 30px, $w: 66.67px);
     }
+  }
+  > .side-container {
+    @include dFlex($g: 64px);
 
     > .language-toggle {
       @include sizeStyle($h: 28px, $w: 88px);
@@ -26,7 +26,7 @@ header {
       background-image: url("../../../../assets/img/header/header_burger_t4.close.svg");
       @include backgroundStyle($bgs: contain);
     }
-    > .menu-close{
+    > .menu-close {
       background-image: url("../../../../assets/img/header/header_burger.svg");
       @include backgroundStyle($bgs: contain);
     }
@@ -37,12 +37,9 @@ header {
   @include borderStyle();
 }
 
-
-
 .animation-pause {
   animation: none !important;
 }
-
 
 .animate-burger-icon-open {
   animation: burger-open 0.85s ease-in-out forwards;
@@ -90,16 +87,15 @@ header {
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  header{
+  header {
     padding: 0 30px;
   }
-  .language-toggle{
+  .language-toggle {
     display: none !important;
   }
 }
 
-.show{
+.show {
   display: flex !important;
 }

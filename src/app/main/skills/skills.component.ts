@@ -10,17 +10,43 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
 
   
-skills: string[] = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Angular",
-  "TypeScript",
-  "Git",
-  "Firebase",
-  "Rest-Api",
-  "Scrum",
-  "SQL"
+skills = [
+  {skill: "HTML",
+    color: "html",
+    animation: "xRotate"
+  },
+  {skill: "CSS",
+    color: "css",
+    animation: "xRotate"
+  },
+  {skill: "JavaScript",
+    color: "js",
+    animation: "xRotate"
+  },
+  {skill: "Angular",
+    color: "ng",
+    animation: "xRotate"
+  },
+  {skill: "TypeScript",
+    color: "ts",
+    animation: "xRotate"
+  },
+  {skill: "Git",
+    color: "git",
+    animation: "xRotate"
+  },
+  {skill: "Firebase",
+    animation: ""
+  },
+  {skill: "Rest-Api",
+    animation: "degRotate"
+  },
+  {skill: "Scrum",
+    animation: "degRotate"
+  },
+  {skill: "SQL",
+    animation: "trial"
+  }
 ]
 
 

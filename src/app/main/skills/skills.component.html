@@ -1,15 +1,30 @@
 <h2>My skills</h2>
 <section>
-    <div class="icon-list">
+  <div class="icon-list">
     @for (item of skills; track $index) {
-        <div class="icon">
-        <img src='./../../../assets/img/skills/icon_{{item}}.svg' alt="">
-        <span>{{item}}</span>
-        </div>
-    } 
+    <div class="icon" [class]="item.animation + ' ' + item.color">
+      @if (item.animation == "trial") {
+      <div class="img-split">
+        <div class="img-half left"></div>
+        <div class="img-half right"></div>
+      </div>
+      } @else {
+      <img
+        src="./../../../assets/img/skills/icon_{{ item.skill }}.svg"
+        alt=""
+      />
+      }
+      <span>{{ item.skill }}</span>
     </div>
-    <div class="continue_learning">
-        <img src="./../../../assets/img/skills/icon_continued_learning.svg" alt="">
-        <span>My Road is not finished.</span>
-        <span>It just started! </span> </div>
-</section>  
+    }
+  </div>
+  <div class="continue_learning degRotate">
+    <img
+      src="./../../../assets/img/skills/icon_continued_learning.svg"
+      alt=""
+    />
+
+    <span>My Road is not finished.</span>
+    <span>It just started! </span>
+  </div>
+</section>

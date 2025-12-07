@@ -1,4 +1,22 @@
 @import "./../../../styles.scss";
+.html {
+  --skill-color: rgb(255, 76, 30);
+}
+.css {
+  --skill-color: rgb(8, 112, 194);
+}
+.js {
+  --skill-color: rgb(255, 224, 8);
+}
+.ng {
+  --skill-color: rgb(209, 16, 147);
+}
+.ts {
+  --skill-color: rgb(55, 124, 200);
+}
+.git {
+  --skill-color: rgb(240, 86, 57);
+}
 
 h2 {
   @include textStyle($ff: "Syne", $fs: 78px, $fw: 800);
@@ -20,9 +38,11 @@ section {
     > .icon {
       @include sizeStyle($h: 104px, $w: 100px);
       @include dFlex($fd: column, $g: 10px);
+
       > img {
         @include sizeStyle($h: 75px, $w: 70px);
       }
+
       > span {
         @include textStyle($fw: 700, $lh: 120%);
       }
@@ -31,6 +51,39 @@ section {
   > .continue_learning {
     @include dFlex($fd: column, $g: 8px);
     width: 100%;
+  }
+}
+
+.xRotate {
+  &:hover > img {
+    animation: xRotate 1s ease-in-out;
+    background-color: color-mix(in srgb, var(--skill-color) 70%, transparent);
+    box-shadow: 0px 0px 28px 12px var(--skill-color);
+    border-radius: 7%;
+  }
+}
+
+.degRotate {
+  &:hover > img {
+    animation: degRotate 1.5s ease-in-out;
+  }
+}
+
+@keyframes xRotate {
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes degRotate {
+  25% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1);
   }
 }
 
@@ -50,7 +103,7 @@ section {
     font-size: 2.25rem !important;
   }
 
-  section{
+  section {
     padding: 30px 20px !important;
   }
 
@@ -64,5 +117,45 @@ section {
       height: 60px !important;
       width: 55.8px !important;
     }
+  }
+}
+
+.img-split {
+  @include sizeStyle($h: 75px, $w: 70px);
+  > .img-half {
+    @include sizeStyle($h: 75px, $w: 70px);
+    background-image: url("./../../../assets/img/skills/icon_sql.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  > .left {
+    position: relative;
+    bottom: 0px;
+  }
+  > .right {
+    position: relative;
+    bottom: 75px;
+    
+  }
+
+  &:hover .right {
+    transition: 1s;
+    transform: translateX(15px);
+  }
+  &:hover .left {
+    transition: 1s;
+    transform: translateX(-15px);
+  }
+}
+
+.trial {
+  &:hover > img {
+    transform: translateY(-42px);
+  }
+}
+
+@keyframes trial {
+  100% {
+    transform: translateY(-42px);
   }
 }
