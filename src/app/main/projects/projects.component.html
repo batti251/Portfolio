@@ -2,8 +2,7 @@
   <div class="title">
     <h2>Portfolio</h2>
     <span>
-      Explore a selection of my work here - <br />
-      Interact with project to see my skills in action</span
+     </span
     >
   </div>
 
@@ -31,7 +30,7 @@
       <div class="project-info none" [class.reverse-animation]="$odd">
         <h3>{{ item.title }}</h3>
         <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
-        <span class="project-description"> {{ item.descriptionEN }}</span>
+        <span class="project-description">{{'project.'+  (item.title | lowercase) | translate}}</span>
         <span class="external-links">
           <a mat-stroked-button [href]="item.git" target="_blank"
             ><strong>GitHub</strong></a

@@ -2,36 +2,34 @@
     <div class="greeting" id="contactform">
     <h3>Say Hi!</h3>
     </div>
-    <div>
-        <span></span>
-        <span>Let's get in contact!</span>
+    <div class="subtext">
+        <span>{{ 'footer.getInContact' | translate }}</span>
     </div>
 
     <form [ngClass]="{'hide': router.url == '/menu'}">
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>Your name</mat-label>
+          <mat-label>{{ 'footer.form1' | translate}}</mat-label>
           <input matInput placeholder="" />
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>Your email</mat-label>
+          <mat-label>{{ 'footer.form2' | translate}}</mat-label>
           <input matInput type="email" placeholder="you@example.com" />
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>Your message</mat-label>
+          <mat-label>{{ 'footer.form3' | translate}}</mat-label>
           <textarea matInput placeholder="Happy to hear from you"></textarea>
         </mat-form-field>
       </p>
       <p class="checkbox-caption">
       <mat-checkbox class="checkbox"></mat-checkbox>
-         I've read the <a href="" class="text-highlight">privacy policy</a> and agree to processingg of
-        my data as outlined
+         {{ 'footer.policy.text1' | translate}} <a href="" class="text-highlight">{{ 'footer.policy.highlight' | translate}}</a> {{ 'footer.policy.text2' | translate}}
         </p>
     </form>
 

@@ -170,6 +170,11 @@ h1 {
 
 .text {
   text-align: justify;
+  width: 100%;
+}
+
+.subtext {
+  @include textStyle($fc: $primary);
 }
 
 .mat-mdc-outlined-button {

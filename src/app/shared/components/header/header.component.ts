@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { inject } from '@angular/core';
 
 
 @Component({
@@ -19,6 +19,7 @@ export class HeaderComponent {
   menuActive = false;
   animationReady = false;
   router = inject(Router);
+  private translate = inject(TranslateService);
 
   /**
    * This Function sets the current language, for either german or english Version
@@ -26,6 +27,7 @@ export class HeaderComponent {
    */
   setActiveStatus(language: string) {
     this.activeLanguage = language
+    this.translate.use(language)
   }
 
   /**

@@ -1,30 +1,22 @@
 <section>
-  <h2>About me</h2>
+  <h2>{{ "aboutMe.title" | translate }}</h2>
   <div class="introduction">
     <article>
       <p class="text">
-        In 2022 mit einer 2 tägigen SQL-Schulung angefangen, habe ich seitdem
-        dutzende Unternehmensreports auf Basis von Microsoft Dynamics NAV 2009
-        mit Visual Studio 2008 erstellt. Wenn ich dabei eins gelernt habe:<br />
-        <strong>Ausdauer schafft Fortschritt</strong>
+        {{ "aboutMe.p1" | translate }}<br />
+        <strong>{{ 'aboutMe.p1.highlight' | translate }}</strong>
       </p>
 
       <p class="text">
-        Mit diesem Mindset stelle ich mich nun der Herausforderung, mir den Weg
-        in die Softwareentwicklung zu ebnen.
+        {{ "aboutMe.p2" | translate }}
       </p>
 
       <p class="text">
-        In meiner Arbeit verbinde ich analytisches Denken mit Kreativität und
-        Ausdauer. Probleme betrachte ich gerne aus verschiedenen Blickwinkeln
-        und arbeite strukturiert an klaren, nachhaltigen Lösungen.
-        Zusammenarbeit im Team ist mir dabei genauso wichtig wie eigenständiges
-        Arbeiten.
+        {{ "aboutMe.p3" | translate }}
       </p>
 
       <p class="text">
-        Meine Passion ist es Dinge zu verbessern, mein Anspruch dies mit
-        Software zu erreichen
+        {{ "aboutMe.p4" | translate }}
       </p>
       <ul>
         <li>
@@ -52,8 +44,11 @@
           />Communication at the same level
         </li>
       </ul>
-      <a mat-stroked-button href="#contactform" target="_self"><strong>Contact
-            </strong></a>
+      <a mat-stroked-button href="#contactform" target="_self"
+        ><strong>
+          {{ 'aboutMe.a' | translate }}
+        </strong></a
+      >
     </article>
 
     <figure>

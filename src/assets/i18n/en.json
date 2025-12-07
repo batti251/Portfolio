@@ -1,0 +1,33 @@
+{
+  "aboutMe.title": "About me",
+  "aboutMe.p1": "Starting with a two-day SQL training course in 2022, I have since created dozens of company reports based on Microsoft Dynamics NAV 2009 with Visual Studio 2008. If I have learned one thing in the process, it is that:",
+  "aboutMe.p1.highlight": "perseverance leads to progress",
+  "aboutMe.p2": "With this mindset, I am now taking on the challenge of paving my way into software development.",
+  "aboutMe.p3": "In my work, I combine analytical thinking with creativity and perseverance. I like to look at problems from different angles and work in a structured way to find clear, sustainable solutions. Teamwork is just as important to me as working independently.",
+  "aboutMe.p4": "My passion is to improve things, and my goal is to achieve this with software.",
+  "aboutMe.li1" : "Located near Cologne/Bonn",
+  "aboutMe.li2" : "Willing to Learn",
+  "aboutMe.li3" : "Ready to Work",
+  "aboutMe.li4" : "Communication at the same level",
+  "aboutMe.a" : "Contact",
+  "skills.title" : "My skills",
+  "skills.phrase1": "My Road is not finished.",
+  "skills.phrase2": "It just started!",
+  "projects.subtext": "Curious? Explore a selection of my previous projects here!",
+  "project.join" : "A Group-Project implementing a Kanban System, supported by Google-Firebase, to organize tasks within a Team. Add tasks, assign certain users to it and make sure to follow the Deadlines",
+  "project.sharkie" : "Object-Orientated 2D-Browser Game. Move Sharkie through the Deep Sea and face different Enemies.",
+  "project.pokedex" : "A Pokemon Library based on the PokéAPI. ",
+
+  "footer.getInContact": "Let's get in contact!",
+
+  "footer.form1": "Your name",
+  "footer.form2": "Your email",
+  "footer.form3": "Your message",
+
+  "footer.policy.text1" : " I've read the ",
+  "footer.policy.highlight": "privacy policy ",
+  "footer.policy.text2" : "and agree to processing of my data as outlined"
+
+   
+
+} 

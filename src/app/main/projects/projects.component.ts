@@ -2,11 +2,12 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatButtonModule, CommonModule],
+  imports: [MatButtonModule, CommonModule, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -31,7 +32,6 @@ ngOnInit() {
 
   projects = [{
     title: 'Join',
-    descriptionEN: 'A Group-Project implementing a Kanban System, supported by Google-Firebase, to organize tasks within a Team. Add tasks, assign certain users to it and make sure to follow the Deadlines',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
     imgsrc: './../../../assets/img/thumbnail/join.svg',
     git: 'https://github.com/batti251/Join',
@@ -39,7 +39,6 @@ ngOnInit() {
   },
   {
     title: 'Sharkie',
-    descriptionEN: 'Object-Orientated 2D-Browser Game. Move Sharkie through the Deep Sea and face different Enemies.',
     skills: ['JavaScript', 'HTML', 'CSS',],
     imgsrc: './../../../assets/img/thumbnail/sharkie.svg',
     git: 'https://github.com/batti251/Sharkie',
@@ -47,7 +46,6 @@ ngOnInit() {
   },
   {
     title: 'Pokedex',
-    descriptionEN: 'A Pokemon Library based on the PokéAPI. ',
     skills: ['JavaScript', 'HTML', 'CSS', 'API'],
     imgsrc: './../../../assets/img/thumbnail/pokedex.svg',
     git: 'https://github.com/batti251/Pokedex',

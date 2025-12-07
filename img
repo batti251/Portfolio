@@ -1,2 +1,12 @@
 
 C:\Users\Sebastian B］z\Desktop\IT\Developer Academy\Modul 15\portfolio\portfolio>git pull 
+Already up to date.
+
+C:\Users\Sebastian B］z\Desktop\IT\Developer Academy\Modul 15\portfolio\portfolio>git add . 
+
+C:\Users\Sebastian B］z\Desktop\IT\Developer Academy\Modul 15\portfolio\portfolio>git commit -m "feat[about-me]: add mat-stroked-button and internal forwarding to html-form. adjust figure styling and responsive design" 
+[main fcf925b] feat[about-me]: add mat-stroked-button and internal forwarding to html-form. adjust figure styling and responsive design
+ 10 files changed, 37 insertions(+), 26 deletions(-)
+ create mode 100644 img
+
+C:\Users\Sebastian B］z\Desktop\IT\Developer Academy\Modul 15\portfolio\portfolio>git push 

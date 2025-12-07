@@ -1,0 +1,30 @@
+{
+  "aboutMe.title": "Über mich",
+  "aboutMe.p1": "In 2022 mit einer 2 tägigen SQL-Schulung angefangen, habe ich seitdem dutzende Unternehmensreports auf Basis von Microsoft Dynamics NAV 2009 mit Visual Studio 2008 erstellt. Wenn ich dabei eins gelernt habe:",
+  "aboutMe.p1.highlight": "Ausdauer schafft Fortschritt",
+  "aboutMe.p2": "Mit diesem Mindset stelle ich mich nun der Herausforderung, mir den Weg in die Softwareentwicklung zu ebnen.",
+  "aboutMe.p3": "In meiner Arbeit verbinde ich analytisches Denken mit Kreativität und Ausdauer. Probleme betrachte ich gerne aus verschiedenen Blickwinkeln und arbeite strukturiert an klaren, nachhaltigen Lösungen. Zusammenarbeit im Team ist mir dabei genauso wichtig wie eigenständiges Arbeiten.",
+  "aboutMe.p4": "Meine Passion ist es Dinge zu verbessern, mein Anspruch dies mit Software zu erreichen.",
+  "aboutMe.li1" : "Wohnhaft zwischen Köln / Bonn",
+  "aboutMe.li2" : "Willens zu lernen",
+  "aboutMe.li3" : "Bereit zum Arbeiten",
+  "aboutMe.li4" : "Kommunikation auf Augenhöhe",
+  "aboutMe.a" : "Kontakt",
+  "skills.title" : "Meine Kompetenzen",
+  "skills.phrase1": "Meine Reise ist noch nicht zu Ende",
+  "skills.phrase2": "Sie hat erst gerade begonnen!",
+  "projects.subtext": "Neugierig geworden? Entdecken Sie hier eine Auswahl meiner bisherigen Projekte!",
+  "project.join" : "Ein Gruppenprojekt zur Implementierung eines Kanban-Systems, unterstützt durch Google-Firebase, um Aufgaben innerhalb eines Teams zu organisieren. Fügen Sie Aufgaben hinzu, weisen Sie bestimmte Benutzer zu und achten Sie darauf, die Fristen einzuhalten.",
+  "project.sharkie" : "Objektorientiertes 2D-Browsergame. Bewege Sharkie durch die Tiefsee und stelle dich verschiedenen Feinden.",
+  "project.pokedex" : "Eine Pokémon-Bibliothek basierend auf der PokéAPI.",
+  "footer.getInContact": "Lass uns ins Gespräch kommen!",
+
+  "footer.form1": "Dein Name",
+  "footer.form2": "Deine E-Mail",
+  "footer.form3": "Deine Nachricht",
+  
+  
+  "footer.policy.text1": " Ich habe die ",
+  "footer.policy.highlight": "Datenschutzerklärung ",
+  "footer.policy.text2" : "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+}

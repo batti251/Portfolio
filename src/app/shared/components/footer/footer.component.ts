@@ -8,11 +8,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule],
+  imports: [CommonModule, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule, TranslatePipe],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
