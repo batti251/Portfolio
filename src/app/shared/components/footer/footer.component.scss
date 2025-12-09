@@ -79,8 +79,12 @@ input {
 }
 
 @media screen and (max-width: 768px) {
-  .mat-mdc-form-field, .checkbox-caption {
+  .mat-mdc-form-field,
+  .checkbox-caption {
     width: 500px;
+  }
+  img {
+    height: 28px !important;
   }
 
   .greeting {
@@ -93,7 +97,22 @@ input {
     width: 400px;
   }
 
-  .footer-card{
+  .mat-mdc-card-content:first-child{
+    padding: unset !important;
+  }
+
+  .wrap-copyright{
+    flex-direction: row !important;
+    width: unset !important;
+    align-items: center !important;
+
+  }
+
+  img {
+    height: 40px !important;
+  }
+
+  .footer-card {
     flex-direction: column-reverse;
   }
 
@@ -111,8 +130,17 @@ input {
     width: 280px;
   }
 
+
   .checkbox-caption {
     font-size: 1rem;
     width: 300px;
+  }
+
+  img {
+    height: 20px !important;
+  }
+
+  .footer-copyright{
+    font-size: 1rem !important;
   }
 }
