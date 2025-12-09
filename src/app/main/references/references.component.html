@@ -1,0 +1,18 @@
+<section>
+  <div class="title">
+    <h2>References</h2>
+    <span>{{ 'reference.subtext' | translate}}</span>
+  </div>
+<div class="reference-wrap">
+  @for (item of references; track $index) {
+        <div class="reference-container">
+          <img src="./../../../assets/img/references/format_quote.svg" alt="">
+          <h3>{{item.name | titlecase}}</h3>
+          <span class="reference-relation">{{item.relation | titlecase}}</span>
+          <p class="reference-text text">
+            {{ 'reference.' + (item.name) | translate}}
+          </p>
+        </div>
+  }
+</div>
+</section>

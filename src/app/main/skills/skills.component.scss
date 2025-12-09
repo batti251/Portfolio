@@ -124,7 +124,7 @@ section {
   @include sizeStyle($h: 75px, $w: 70px);
   > .img-half {
     @include sizeStyle($h: 75px, $w: 70px);
-    background-image: url("./../../../assets/img/skills/icon_sql.svg");
+    background-image: url("./../../../assets/img/skills/icon_SQL.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }

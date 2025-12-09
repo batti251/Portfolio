@@ -17,6 +17,11 @@
   "project.join" : "Ein Gruppenprojekt zur Implementierung eines Kanban-Systems, unterstützt durch Google-Firebase, um Aufgaben innerhalb eines Teams zu organisieren. Fügen Sie Aufgaben hinzu, weisen Sie bestimmte Benutzer zu und achten Sie darauf, die Fristen einzuhalten.",
   "project.sharkie" : "Objektorientiertes 2D-Browsergame. Bewege Sharkie durch die Tiefsee und stelle dich verschiedenen Feinden.",
   "project.pokedex" : "Eine Pokémon-Bibliothek basierend auf der PokéAPI.",
+
+  "reference.subtext": "Ich arbeite sowohl selbstständig als auch im Team sehr gut. Hier sind einige Kommentare meiner Kollegen über die Zusammenarbeit mit mir.",
+  "reference.ozan" : "Sebastian hat mit seiner Stärke schwierige Aufgaben zu verstehen und in Häppchen aufzuteilen und zu organisieren der Gruppe extrem geholfen. Er war immer sehr kooperativ und hat mit seinen Feedbacks der Gruppe echt geholfen. Mit ihm ging die Arbeit sehr gut voran. Jeder wünscht sich einen Sebastian in der Gruppe.",
+  "reference.felix" : "lorem ipsum",
+
   "footer.getInContact": "Lass uns ins Gespräch kommen!",
 
   "footer.form1": "Dein Name",
