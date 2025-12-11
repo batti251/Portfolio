@@ -1,4 +1,5 @@
-@import "../../../../styles.scss";
+@use './../../index.scss' as *;
+@use "./../../../../styles.scss" as *;
 
 header {
   @include dFlex($jc: space-between);

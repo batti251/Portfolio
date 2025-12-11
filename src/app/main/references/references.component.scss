@@ -1,4 +1,4 @@
-@import "./../../../styles.scss";
+@use './../../shared/index' as *;
 
 .reference-wrap {
   @include dFlex($g: 20px);

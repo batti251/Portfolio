@@ -1,4 +1,4 @@
-@import "./../../../styles.scss";
+@use './../../shared/index' as *;
 
 section {
   @include dFlex($g: 48px, $fd: column);

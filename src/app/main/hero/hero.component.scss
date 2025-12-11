@@ -1,4 +1,4 @@
-@import "../../../styles.scss";
+@use './../../shared/index' as *;
 
 .hero {
   @include dFlex($fd: column, $g: 16px);

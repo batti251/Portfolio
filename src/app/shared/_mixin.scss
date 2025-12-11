@@ -1,0 +1,78 @@
+@use './variables' as *;
+
+@mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $g;
+}
+
+@mixin textStyle(
+  $ff: "Overpass",
+  $fs: 16px,
+  $fw: 400,
+  $fst: normal,
+  $fc: $secondary,
+  $lh: 100%,
+  $ls: -2.5%,
+  $va: middle
+) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  font-style: $fst;
+  color: $fc;
+  line-height: $lh;
+  letter-spacing: $ls;
+  vertical-align: $va;
+}
+
+@mixin margin($m: 0 0 0 0) {
+  margin: $m;
+}
+
+@mixin padding($p: 0 0 0 0) {
+  padding: $p;
+}
+
+@mixin fontStyle($fs: 24px, $fw: bold, $c: #000000, $td: none) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+  text-decoration: $td;
+}
+
+@mixin positionStyle($p: absolute, $t: 0, $r: 0, $b: 0, $l: 0, $zi: 0) {
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $zi;
+}
+
+@mixin sizeStyle($h: 64px, $w: 64px, $deg: 0) {
+  height: $h;
+  width: $w;
+  transform: rotate($deg);
+}
+
+@mixin backgroundStyle(
+  $bgs: cover,
+  $bgr: no-repeat,
+  $bgp: 50% 50%,
+  $bgc: unset
+) {
+  background-size: $bgs;
+  background-repeat: $bgr;
+  background-position: $bgp;
+  background-color: $bgc;
+}
+
+@mixin borderStyle($bs: solid, $br: 0, $bc: $highlight, $bw: 2px) {
+  border-style: $bs;
+  border-radius: $br;
+  border-color: $bc;
+  border-width: $bw;
+}
