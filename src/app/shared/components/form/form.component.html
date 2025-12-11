@@ -1,43 +1,75 @@
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
   <p>
     <mat-form-field appearance="outline">
-      <mat-label for="name" name="name">{{
+      <mat-label for="name" name="name">
+       @if (!name.valid && name.touched){
+          {{
+        "footer.form1.error" | translate
+      }}
+        } @else  {
+        {{
         "footer.form1" | translate
-      }}</mat-label>
+      }}
+        }
+      </mat-label>
       <input
         [(ngModel)]="newMessage.name"
         name="name"
         matInput
         placeholder=""
+        required
+        #name="ngModel"
       />
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field appearance="outline">
-      <mat-label for="email" name="email">{{
+      <mat-label for="email" name="email">
+         @if (!mail.valid && mail.touched){
+          {{
+        "footer.form2.error" | translate
+      }}
+        } @else  {
+        {{
         "footer.form2" | translate
-      }}</mat-label>
+      }}
+        }</mat-label>
       <input
         [(ngModel)]="newMessage.email"
         matInput
         type="email"
         name="email"
         placeholder="you@example.com"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        required
+        #mail="ngModel"
       />
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field appearance="outline">
-      <mat-label for="message" name="message">{{
+      <mat-label for="message" name="message">
+        @if (!message.valid && message.touched){
+          {{
+        "footer.form3.error" | translate
+      }}
+        } @else {
+        {{
         "footer.form3" | translate
-      }}</mat-label>
+      }}
+      }
+      
+    </mat-label>
       <textarea
         [(ngModel)]="newMessage.message"
         name="message"
         matInput
+        minlength="5"
         placeholder="Happy to hear from you"
+        required=""
+        #message="ngModel"
       ></textarea>
     </mat-form-field>
   </p>

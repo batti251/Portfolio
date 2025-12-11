@@ -25,9 +25,11 @@
   "footer.getInContact": "Lass uns ins Gespräch kommen!",
 
   "footer.form1": "Dein Name",
+  "footer.form1.error": "Bitte nenne mir deinen Namen",
   "footer.form2": "Deine E-Mail",
+  "footer.form2.error": "Bitte gib eine valide E-Mail an",
   "footer.form3": "Deine Nachricht",
-  
+  "footer.form3.error": "Teile deine Gedanken!",
   
   "footer.policy.text1": " Ich habe die ",
   "footer.policy.highlight": "Datenschutzerklärung ",

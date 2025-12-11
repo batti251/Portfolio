@@ -8,7 +8,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
 import { TranslatePipe } from "@ngx-translate/core";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -28,9 +28,9 @@ export class FormComponent {
   }
 
 
-  onSubmit() {
-    console.log("gesendet");
-    
-    console.log(this.newMessage)
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log(this.newMessage)
+    }
   }
 }
