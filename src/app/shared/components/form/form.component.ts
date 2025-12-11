@@ -10,6 +10,7 @@ import { inject } from '@angular/core';
 import { TranslatePipe } from "@ngx-translate/core";
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class FormComponent {
   router = inject(Router);
+  http = inject(HttpClient);
 
   newMessage = {
     name: "",
@@ -28,9 +30,33 @@ export class FormComponent {
   }
 
 
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://sebastian-buenz.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.newMessage)
+    if (ngForm.submitted && ngForm.form.valid/*  && !this.mailTest */) {
+      this.http.post(this.post.endPoint, this.post.body(this.newMessage))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid/*  && this.mailTest */) {
+      ngForm.resetForm();
     }
   }
 }
