@@ -1,4 +1,4 @@
-@use './../../index' as *;
+@use "./../../index" as *;
 
 :host {
   display: flex;
@@ -10,15 +10,9 @@ footer {
   @include backgroundStyle($bgc: $secondary);
   @include sizeStyle($h: 100%, $w: 100%);
   max-height: 600px;
-  @include dFlex($fd: column);
+  @include dFlex($fd: column, $g: 24px);
   padding: 100px 0 0 0;
   clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 0px));
-
-  > form {
-    @include dFlex($fd: column);
-    @include sizeStyle($h: 490px, $w: 100%);
-    max-width: 600px;
-  }
 }
 
 .greeting {
@@ -27,15 +21,6 @@ footer {
     @include textStyle($ff: "Syne", $fs: 4.875rem, $fw: 800);
     color: #fffcf3;
   }
-}
-
-.mat-mdc-form-field {
-  width: 600px;
-  --mdc-outlined-text-field-focus-outline-color: #ff9900;
-  --mdc-outlined-text-field-caret-color: #ff9900;
-  --mdc-outlined-text-field-label-text-color: #ff9900;
-  --mdc-outlined-text-field-hover-label-text-color: #ff9900;
-  --mdc-outlined-text-field-focus-label-text-color: #ff9900;
 }
 
 .footer-card {
@@ -58,54 +43,40 @@ footer {
   }
 }
 
-textarea {
-  max-height: 180px;
-}
-input {
-  height: 100px;
-}
-
 .hide {
   display: none !important;
 }
 
-.text-highlight {
-  color: #ff9900;
-}
-
-.checkbox-caption {
-  color: #fffcf3;
-  text-align: center;
+@media screen and (max-width: 992px) {
+  .greeting {
+    > h3 {
+      font-size: 4.5rem !important;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .mat-mdc-form-field,
-  .checkbox-caption {
-    width: 500px;
-  }
   img {
     height: 28px !important;
   }
 
   .greeting {
     padding: 0 240px 0 0;
+    > h3 {
+      font-size: 3.875rem !important;
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
-  .mat-mdc-form-field {
-    width: 400px;
-  }
-
-  .mat-mdc-card-content:first-child{
+  .mat-mdc-card-content:first-child {
     padding: unset !important;
   }
 
-  .wrap-copyright{
+  .wrap-copyright {
     flex-direction: row !important;
     width: unset !important;
     align-items: center !important;
-
   }
 
   img {
@@ -116,31 +87,26 @@ input {
     flex-direction: column-reverse;
   }
 
-  .checkbox-caption {
-    width: 400px;
-  }
-
   .greeting {
     padding: 0;
+    > h3 {
+      font-size: 3rem !important;
+    }
   }
 }
 
 @media screen and (max-width: 420px) {
-  .mat-mdc-form-field {
-    width: 280px;
-  }
-
-
-  .checkbox-caption {
-    font-size: 1rem;
-    width: 300px;
-  }
-
   img {
     height: 20px !important;
   }
 
-  .footer-copyright{
+  .footer-copyright {
     font-size: 1rem !important;
+  }
+
+  .greeting {
+    > h3 {
+      font-size: 2rem !important;
+    }
   }
 }

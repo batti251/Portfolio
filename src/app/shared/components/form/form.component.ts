@@ -5,20 +5,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatCardModule } from '@angular/material/card';
 import { Router } from '@angular/router';
 import { inject } from '@angular/core';
 import { TranslatePipe } from "@ngx-translate/core";
-import { FormComponent } from '../form/form.component';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, FormComponent, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule, TranslatePipe],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  imports: [CommonModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe],
+  templateUrl: './form.component.html',
+  styleUrl: './form.component.scss'
 })
-export class FooterComponent {
+export class FormComponent {
 
-  router = inject(Router);
+    router = inject(Router);
+
 }

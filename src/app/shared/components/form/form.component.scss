@@ -1,0 +1,61 @@
+@use "./../../index" as *;
+
+form {
+  @include dFlex($fd: column);
+  @include sizeStyle($h: 100%, $w: 100%);
+  max-height: 420px;
+  max-width: 600px;
+
+  > p {
+    > .mat-mdc-form-field {
+      width: 600px;
+      --mdc-outlined-text-field-focus-outline-color: #ff9900;
+      --mdc-outlined-text-field-caret-color: #ff9900;
+      --mdc-outlined-text-field-label-text-color: #ff9900;
+      --mdc-outlined-text-field-hover-label-text-color: #ff9900;
+      --mdc-outlined-text-field-focus-label-text-color: #ff9900;
+    }
+
+    > input {
+      height: 100px;
+    }
+
+    > textarea {
+      max-height: 180px;
+    }
+  }
+
+  > .checkbox-caption {
+    color: #fffcf3;
+    text-align: center;
+
+    > .text-highlight {
+      color: #ff9900;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mat-mdc-form-field ,
+  .checkbox-caption{
+    width: 500px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mat-mdc-form-field,
+  .checkbox-caption {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mat-mdc-form-field {
+    width: 280px !important;
+  }
+
+  .checkbox-caption {
+    font-size: 1rem !important;
+    width: 300px !important;
+  }
+}
