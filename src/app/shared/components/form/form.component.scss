@@ -24,6 +24,9 @@ form {
       max-height: 180px;
     }
   }
+  > .button {
+    @include secondary-button();
+  }
 
   > .checkbox-caption {
     color: #fffcf3;
@@ -36,8 +39,8 @@ form {
 }
 
 @media screen and (max-width: 768px) {
-  .mat-mdc-form-field ,
-  .checkbox-caption{
+  .mat-mdc-form-field,
+  .checkbox-caption {
     width: 500px !important;
   }
 }
@@ -46,6 +49,11 @@ form {
   .mat-mdc-form-field,
   .checkbox-caption {
     width: 400px !important;
+  }
+
+  .button {
+    padding: 20px 40px !important;
+    width: 200px !important;
   }
 }
 

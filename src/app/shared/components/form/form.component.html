@@ -1,26 +1,53 @@
-    <form (ngSubmit)="onSubmit()">
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label for="name" name="name">{{ 'footer.form1' | translate}}</mat-label>
-          <input matInput placeholder="" />
-        </mat-form-field>
-      </p>
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label for="name" name="name">{{
+        "footer.form1" | translate
+      }}</mat-label>
+      <input
+        [(ngModel)]="newMessage.name"
+        name="name"
+        matInput
+        placeholder=""
+      />
+    </mat-form-field>
+  </p>
 
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label for="email" name="email">{{ 'footer.form2' | translate}}</mat-label>
-          <input matInput type="email" placeholder="you@example.com" />
-        </mat-form-field>
-      </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label for="email" name="email">{{
+        "footer.form2" | translate
+      }}</mat-label>
+      <input
+        [(ngModel)]="newMessage.email"
+        matInput
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+      />
+    </mat-form-field>
+  </p>
 
-      <p>
-        <mat-form-field appearance="outline">
-          <mat-label for="message">{{ 'footer.form3' | translate}}</mat-label>
-          <textarea matInput placeholder="Happy to hear from you"></textarea>
-        </mat-form-field>
-      </p>
-      <p class="checkbox-caption">
-      <mat-checkbox class="checkbox"></mat-checkbox>
-         {{ 'footer.policy.text1' | translate}} <a href="" class="text-highlight">{{ 'footer.policy.highlight' | translate}}</a> {{ 'footer.policy.text2' | translate}}
-        </p>
-    </form>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label for="message" name="message">{{
+        "footer.form3" | translate
+      }}</mat-label>
+      <textarea
+        [(ngModel)]="newMessage.message"
+        name="message"
+        matInput
+        placeholder="Happy to hear from you"
+      ></textarea>
+    </mat-form-field>
+  </p>
+  <p class="checkbox-caption">
+    <mat-checkbox class="checkbox"></mat-checkbox>
+    {{ "footer.policy.text1" | translate }}
+    <a href="" class="text-highlight">{{
+      "footer.policy.highlight" | translate
+    }}</a>
+    {{ "footer.policy.text2" | translate }}
+  </p>
+    <input class="button" type="submit" value="Send Email" />
+</form>

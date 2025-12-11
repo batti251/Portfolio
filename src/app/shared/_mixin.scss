@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0) {
   display: flex;
@@ -86,6 +86,21 @@
   @include padding($p: 20px 40px);
   @include sizeStyle($h: 68px, $w: 149px);
 
+  &:hover {
+    filter: brightness(1);
+    box-shadow: 0px 0px 12px 4px $highlight;
+    color: $highlight;
+    border-color: $highlight;
+  }
+}
+
+@mixin secondary-button {
+  background-color: $secondary;
+  @include borderStyle($bw: 4px, $bs: solid, $bc: $neutral);
+  @include textStyle($fs: 23px, $lh: 120%, $fc: $primary);
+  @include sizeStyle($h: 68px, $w: 269px);
+  @include padding(20px 60px);
+  
   &:hover {
     filter: brightness(1);
     box-shadow: 0px 0px 12px 4px $highlight;

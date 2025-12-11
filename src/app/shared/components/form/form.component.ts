@@ -9,19 +9,28 @@ import { Router } from '@angular/router';
 import { inject } from '@angular/core';
 import { TranslatePipe } from "@ngx-translate/core";
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe, FormsModule],
+  imports: [CommonModule, MatSelectModule, MatButtonModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe, FormsModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
+  router = inject(Router);
 
-    router = inject(Router);
+  newMessage = {
+    name: "",
+    email: "",
+    message: "",
+  }
 
-    onSubmit(){
-      console.log("hallo")
-    }
+
+  onSubmit() {
+    console.log("gesendet");
+    
+    console.log(this.newMessage)
+  }
 }
