@@ -1,8 +1,11 @@
-@use './../../shared/index' as *;
+@use "./../../shared/index" as *;
 
 section {
   @include dFlex($g: 48px, $fd: column);
   @include padding($p: 0px 10px);
+  > .title {
+    @include title();
+  }
   > .project-list {
     > .counter {
       display: none;
@@ -11,11 +14,11 @@ section {
     > .img-wrapper {
       position: relative;
       filter: brightness(0.02);
-         
+
       > .preview {
         @include sizeStyle($h: 600px, $w: 720px);
         max-width: 100%;
-        padding: 0px 50px 42px 0px;
+        @include padding(0px 50px 42px 0px);
       }
 
       &::after {
@@ -46,6 +49,9 @@ section {
         }
         > .external-links {
           @include dFlex($g: 16px, $fd: column);
+          > .button {
+            @include primary-button();
+          }
         }
       }
     }
@@ -76,8 +82,6 @@ section {
     }
   }
 }
-
-
 
 .none {
   display: none !important;
@@ -203,7 +207,7 @@ section {
     }
   }
 
-  .mat-mdc-outlined-button{
+  .mat-mdc-outlined-button {
     height: 60px !important;
     width: 120px !important;
   }
@@ -231,7 +235,7 @@ section {
     }
   }
 
-    .mat-mdc-outlined-button{
+  .mat-mdc-outlined-button {
     height: 50px !important;
     width: 100px !important;
     font-size: 19px !important;

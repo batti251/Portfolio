@@ -1,27 +1,8 @@
 @use './../../shared/index' as *;
 
-.html {
-  --skill-color: rgb(255, 76, 30);
-}
-.css {
-  --skill-color: rgb(8, 112, 194);
-}
-.js {
-  --skill-color: rgb(255, 224, 8);
-}
-.ng {
-  --skill-color: rgb(209, 16, 147);
-}
-.ts {
-  --skill-color: rgb(55, 124, 200);
-}
-.git {
-  --skill-color: rgb(240, 86, 57);
-}
-
 h2 {
   @include textStyle($ff: "Syne", $fs: 78px, $fw: 800);
-  @include positionStyle($p: relative, $t: 44px, $zi: 1);
+  @include positionStyle($p: relative, $t: 80px, $zi: 1);
   @include padding($p: 10px);
   background-color: $primary;
 }
@@ -91,7 +72,7 @@ section {
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 2.5rem !important;
-    top: 30px !important;
+    top: 60px !important;
   }
 
   .icon-list {
@@ -105,7 +86,7 @@ section {
   }
 
   section {
-    padding: 30px 20px !important;
+    padding: 80px 20px !important;
   }
 
   .icon-list {

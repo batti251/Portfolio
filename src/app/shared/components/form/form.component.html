@@ -1,21 +1,21 @@
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>{{ 'footer.form1' | translate}}</mat-label>
+          <mat-label for="name" name="name">{{ 'footer.form1' | translate}}</mat-label>
           <input matInput placeholder="" />
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>{{ 'footer.form2' | translate}}</mat-label>
+          <mat-label for="email" name="email">{{ 'footer.form2' | translate}}</mat-label>
           <input matInput type="email" placeholder="you@example.com" />
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field appearance="outline">
-          <mat-label>{{ 'footer.form3' | translate}}</mat-label>
+          <mat-label for="message">{{ 'footer.form3' | translate}}</mat-label>
           <textarea matInput placeholder="Happy to hear from you"></textarea>
         </mat-form-field>
       </p>

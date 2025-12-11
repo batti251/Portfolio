@@ -1,4 +1,5 @@
-@use './app/shared/index.scss' as *;
+@import 'app/shared/index';
+
 
 /* syne-regular - latin */
 @font-face {
@@ -78,15 +79,7 @@ h1 {
   font-family: "Syne" !important;
 }
 
-.title {
-  @include dFlex($g: 16px, $fd: column);
-  > h2 {
-    @include textStyle($fw: 800, $fs: 3rem);
-  }
-  > span {
-    text-align: center;
-  }
-}
+
 
 .text {
   text-align: justify;
@@ -95,20 +88,4 @@ h1 {
 
 .subtext {
   @include textStyle($fc: $primary);
-}
-
-.mat-mdc-outlined-button {
-  border-color: $secondary;
-  border-radius: 0;
-  color: $secondary;
-  border-width: 4px;
-  @include textStyle($fs: 23px, $lh: 120%);
-  @include padding($p: 20px 40px);
-  @include sizeStyle($h: 68px, $w: 149px);
-  &:hover {
-    filter: brightness(1);
-    box-shadow: 0px 0px 12px 4px $highlight;
-    color: $highlight;
-    border-color: $highlight;
-  }
 }

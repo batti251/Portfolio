@@ -12,7 +12,7 @@ app-about-me {
 }
 
 app-skills {
-    @include dFlex($fd: column);
+    @include dFlex($fd: column, $g: 32px);
 }
 
 app-projects {

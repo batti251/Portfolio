@@ -1,4 +1,4 @@
-@use './../../shared/index' as *;
+@use "./../../shared/index" as *;
 
 .hero {
   @include dFlex($fd: column, $g: 16px);
@@ -7,7 +7,7 @@
   .title {
     @include positionStyle($p: relative, $zi: 1);
     @include backgroundStyle($bgs: contain, $bgc: $primary);
-
+    @include title();
     > h1 {
       @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 8rem);
     }
@@ -24,7 +24,6 @@
         @include textStyle($fw: 700, $fst: bold, $fs: 3rem, $fc: $highlight);
       }
     }
-    
   }
 }
 
@@ -58,32 +57,31 @@
 }
 
 @keyframes pulse {
-  0%{
+  0% {
     transform: scale(1);
   }
-  8%{
+  8% {
     transform: scale(1.05);
     text-shadow: 0.5px 0.5px rgba(12, 12, 12, 0.795);
   }
-  20%{
-     transform: scale(1);
-     text-shadow: unset;
+  20% {
+    transform: scale(1);
+    text-shadow: unset;
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
-
 
 @keyframes arrowDown {
   0% {
     transform: translateY(-240px);
     opacity: 0;
   }
-  49%{
-     opacity: 0;
+  49% {
+    opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
 
@@ -92,63 +90,59 @@
   }
 }
 
-
 @media screen and (max-width: 1200px) {
-  h1{
+  h1 {
     font-size: 6rem !important;
   }
-  .name{
+  .name {
     font-size: 2rem !important;
   }
 }
 
 @media screen and (max-width: 992px) {
-  h1{
+  h1 {
     font-size: 5.5rem !important;
   }
-  .name{
+  .name {
     font-size: 1.75rem !important;
   }
 
-   span{
+  span {
     font-size: 1.25rem !important;
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 4.25rem !important;
   }
-  .name{
+  .name {
     font-size: 1.5rem !important;
   }
 }
 
-
 @media screen and (max-width: 600px) {
-  h1{
+  h1 {
     font-size: 3rem !important;
   }
-  .name{
+  .name {
     font-size: 1rem !important;
   }
 
-  span{
+  span {
     font-size: 1rem !important;
   }
 }
 
-
 @media screen and (max-width: 440px) {
-  h1{
+  h1 {
     font-size: 2rem !important;
   }
-  .name{
+  .name {
     font-size: 1rem !important;
   }
 
-  span{
+  span {
     font-size: 1rem !important;
   }
 }
