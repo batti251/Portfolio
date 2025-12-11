@@ -28,9 +28,8 @@ export class FormComponent {
     email: "",
     message: "",
   }
-
-
-  mailTest = true;
+  
+policy = false;
 
   post = {
     endPoint: 'https://sebastian-buenz.de/sendMail.php',
@@ -44,7 +43,7 @@ export class FormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid/*  && !this.mailTest */) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.newMessage))
         .subscribe({
           next: (response) => {
@@ -55,7 +54,7 @@ export class FormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid/*  && this.mailTest */) {
+    } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();
     }
   }

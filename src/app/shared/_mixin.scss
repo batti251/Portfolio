@@ -100,7 +100,7 @@
   @include textStyle($fs: 23px, $lh: 120%, $fc: $primary);
   @include sizeStyle($h: 68px, $w: 269px);
   @include padding(20px 60px);
-  
+  cursor: pointer;
   &:hover {
     filter: brightness(1);
     box-shadow: 0px 0px 12px 4px $highlight;

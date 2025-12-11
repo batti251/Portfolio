@@ -9,8 +9,8 @@
 footer {
   @include backgroundStyle($bgc: $secondary);
   @include sizeStyle($h: 100%, $w: 100%);
-  max-height: 660px;
-  @include dFlex($fd: column, $g: 24px);
+  min-height: 800px;
+  @include dFlex($fd: column, $g: 48px, $jc: space-evenly);
   padding: 100px 0 0 0;
   clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 0px));
 }
@@ -97,7 +97,7 @@ footer {
 
 @media screen and (max-width: 420px) {
   img {
-    height: 20px !important;
+    height: 28px !important;
   }
 
   .footer-copyright {

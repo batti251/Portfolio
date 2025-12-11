@@ -63,6 +63,7 @@
       
     </mat-label>
       <textarea
+      class="textarea"
         [(ngModel)]="newMessage.message"
         name="message"
         matInput
@@ -74,12 +75,12 @@
     </mat-form-field>
   </p>
   <p class="checkbox-caption">
-    <mat-checkbox class="checkbox"></mat-checkbox>
-    {{ "footer.policy.text1" | translate }}
+    <mat-checkbox class="checkbox" [(ngModel)]="policy" name="policy"></mat-checkbox>
+    <span>{{ "footer.policy.text1" | translate }}</span>
     <a href="" class="text-highlight">{{
       "footer.policy.highlight" | translate
     }}</a>
-    {{ "footer.policy.text2" | translate }}
+     <span>{{ "footer.policy.text2" | translate }}</span>
   </p>
-    <input class="button" type="submit" value="Send Email" />
+    <input class="button" type="submit" value="Send Email" [disabled]="!policy && !contactForm.valid"/>
 </form>
