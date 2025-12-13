@@ -67,8 +67,6 @@ section {
   &:hover > img {
     transition: 1s;
     animation: rocket 4s ease-in-out;
-    /*     clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
-    transform: translateY(-800px); */
   }
 }
 
@@ -138,8 +136,6 @@ section {
       width: 55.8px !important;
     }
     > .img-split {
-      > .img-half {
-      }
       > .sql {
         height: 60px !important;
         width: 55.8px !important;

@@ -38,7 +38,6 @@ section {
 
 @media screen and (max-width: 992px) {
   .introduction {
-    align-items: center !important;
     article {
       font-size: 1.25rem !important;
     }
@@ -52,6 +51,7 @@ section {
 
   .introduction {
     flex-direction: column !important;
+    align-items: center !important;
   }
 }
 
