@@ -66,19 +66,35 @@ section {
 .rocket {
   &:hover > img {
     transition: 1s;
-    animation: rocket 1s ease-in-out;
-    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
-
+    animation: rocket 4s ease-in-out;
+    /*     clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+    transform: translateY(-800px); */
   }
 }
 
 @keyframes rocket {
-  0%{
-     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 100%  100%);
-}
-  100%{
-     clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+  0% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 100% 100%);
+  }
+  30% {
+    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-900px);
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
 
+  65% {
+    transform: translateY(900px);
+    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
