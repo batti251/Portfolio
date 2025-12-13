@@ -1,4 +1,4 @@
-@use './../../shared/index' as *;
+@use "./../../shared/index" as *;
 
 h2 {
   @include textStyle($ff: "Syne", $fs: 78px, $fw: 800);
@@ -45,18 +45,21 @@ section {
   }
 }
 
-.degRotate {
-  &:hover > img {
-    animation: degRotate 1.5s ease-in-out;
-  }
-}
-
 @keyframes xRotate {
+  0% {
+    transform: scaleX(1);
+  }
   50% {
     transform: scaleX(-1);
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+.degRotate {
+  &:hover > img {
+    animation: degRotate 1.5s ease-in-out;
   }
 }
 
@@ -99,6 +102,39 @@ section {
       height: 60px !important;
       width: 55.8px !important;
     }
+    > .img-split {
+      > .img-half {
+      }
+      > .sql {
+        height: 60px !important;
+        width: 55.8px !important;
+      }
+      > .css {
+        height: 60px !important;
+        width: 55.8px !important;
+      }
+      > .top {
+        bottom: -10px !important;
+        left: 8px;
+      }
+      > .middle {
+        bottom: 50px !important;
+        left: 8px;
+      }
+
+      > .bottom {
+        bottom: 110px !important;
+        left: 8px;
+      }
+      > .right {
+        bottom: 50px !important;
+        left: 7px;
+      }
+      > .left {
+        bottom: -10px !important;
+        left: 7px;
+      }
+    }
   }
 }
 
@@ -106,9 +142,14 @@ section {
   @include sizeStyle($h: 75px, $w: 70px);
   > .img-half {
     @include sizeStyle($h: 75px, $w: 70px);
-    background-image: url("./../../../assets/img/skills/icon_SQL.svg");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  > .sql {
+    background-image: url("./../../../assets/img/skills/icon_SQL.svg");
+  }
+  > .css {
+    background-image: url("./../../../assets/img/skills/icon_CSS.svg");
   }
   > .left {
     position: relative;
@@ -117,7 +158,23 @@ section {
   > .right {
     position: relative;
     bottom: 75px;
-    
+  }
+
+  > .top {
+    position: relative;
+    bottom: 0px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
+  }
+  > .middle {
+    position: relative;
+    bottom: 75px;
+    clip-path: polygon(0% 34%, 100% 34%, 100% 68%, 0% 68%);
+  }
+
+  > .bottom {
+    position: relative;
+    bottom: 150px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 67%, 0% 67%);
   }
 
   &:hover .right {
@@ -128,16 +185,23 @@ section {
     transition: 1s;
     transform: translateX(-15px);
   }
-}
 
-.trial {
-  &:hover > img {
-    transform: translateY(-42px);
+  &:hover > .top {
+    transition: 1s;
+    transform: translateX(-42px);
+    animation: shrink 1s forwards;
+    opacity: 0 !important;
   }
-}
-
-@keyframes trial {
-  100% {
-    transform: translateY(-42px);
+  &:hover > .bottom {
+    transition: 1s;
+    transition-delay: 0.6s;
+    transform: translateX(-42px);
+    opacity: 0 !important;
+  }
+  &:hover > .middle {
+    transition: 1s;
+    transition-delay: 0.3s;
+    transform: translateX(42px);
+    opacity: 0 !important;
   }
 }

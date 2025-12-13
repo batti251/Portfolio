@@ -1,8 +1,8 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="name" name="name">
-       @if (!name.valid && name.touched){
+       @if (!name.valid && !name.pristine){
           {{
         "footer.form1.error" | translate
       }}
@@ -28,7 +28,7 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="email" name="email">
-         @if (!mail.valid && mail.touched){
+         @if (!mail.valid && !mail.pristine){
           {{
         "footer.form2.error" | translate
       }}
@@ -54,7 +54,7 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="message" name="message">
-        @if (!message.valid && message.touched){
+        @if (!message.valid && !message.pristine){
           {{
         "footer.form3.error" | translate
       }}

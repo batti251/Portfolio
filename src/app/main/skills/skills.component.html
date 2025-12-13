@@ -3,12 +3,21 @@
   <div class="icon-list">
     @for (item of skills; track $index) {
     <div class="icon" [class]="item.animation + ' ' + item.color">
-      @if (item.animation == "trial") {
+      @if (item.animation == "double") {
       <div class="img-split">
-        <div class="img-half left"></div>
-        <div class="img-half right"></div>
+        <div class="img-half sql left"></div>
+        <div class="img-half sql right"></div>
       </div>
-      } @else {
+      }
+      @else if (item.animation == "quad") {
+      <div class="img-split">
+        <div class="img-half css top"></div>
+        <div class="img-half css middle"></div>
+        <div class="img-half css bottom"></div>
+      </div>
+      }
+      
+      @else {
       <img
         src="./../../../assets/img/skills/icon_{{ item.skill }}.svg"
         alt=""

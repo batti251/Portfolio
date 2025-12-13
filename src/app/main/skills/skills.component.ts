@@ -18,7 +18,7 @@ skills = [
   },
   {skill: "CSS",
     color: "css",
-    animation: "xRotate"
+    animation: "quad"
   },
   {skill: "JavaScript",
     color: "js",
@@ -46,7 +46,7 @@ skills = [
     animation: "degRotate"
   },
   {skill: "SQL",
-    animation: "trial"
+    animation: "double"
   }
 ]
 
