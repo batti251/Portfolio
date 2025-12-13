@@ -1,7 +1,7 @@
 @use "./../../shared/index" as *;
 
 section {
-  @include dFlex($g: 48px, $fd: column);
+  @include dFlex($g: 72px, $fd: column);
   @include padding($p: 0px 10px);
   > .title {
     @include title();
@@ -110,6 +110,14 @@ section {
         width: 540px !important;
         width: auto;
       }
+    }
+    .external-links {
+      flex-direction: row !important;
+      gap: 8px !important;
+    }
+    .button {
+      height: 50px !important;
+      max-width: 120px !important;
     }
   }
 }

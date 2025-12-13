@@ -33,7 +33,7 @@ ngOnInit() {
   projects = [{
     title: 'Join',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
-    imgsrc: './../../../assets/img/thumbnail/join.svg',
+    imgsrc: './../../../assets/img/thumbnail/join.png',
     git: 'https://github.com/batti251/Join',
     url: 'https://join.sebastian-buenz.de/'
   },
