@@ -9,5 +9,4 @@ import { TranslatePipe } from '@ngx-translate/core';
 })
 export class MenuOverlayComponent{
 
-
 }

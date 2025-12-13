@@ -47,6 +47,10 @@ footer {
   display: none !important;
 }
 
+.unsetHeight {
+  min-height: unset !important;
+}
+
 @media screen and (max-width: 992px) {
   .greeting {
     > h3 {
