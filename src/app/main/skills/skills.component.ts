@@ -37,7 +37,7 @@ skills = [
     animation: "xRotate"
   },
   {skill: "Firebase",
-    animation: ""
+    animation: "rocket"
   },
   {skill: "Rest-Api",
     animation: "degRotate"

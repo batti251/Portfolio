@@ -63,6 +63,25 @@ section {
   }
 }
 
+.rocket {
+  &:hover > img {
+    transition: 1s;
+    animation: rocket 1s ease-in-out;
+    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+
+  }
+}
+
+@keyframes rocket {
+  0%{
+     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 100%  100%);
+}
+  100%{
+     clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
+
+  }
+}
+
 @keyframes degRotate {
   25% {
     transform: rotate(0deg) scale(1.5);
