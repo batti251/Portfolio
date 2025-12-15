@@ -18,11 +18,10 @@ export class HeaderComponent implements OnInit {
   activeLanguage: string | null = "en";
   menuActive = false;
   animationReady = false;
-  private localStorage = inject(LocalStorageService)
   router = inject(Router);
   private translate = inject(TranslateService);
 
-  constructor() {
+  constructor(private localStorageService: LocalStorageService) {
     
   }
 
@@ -66,7 +65,7 @@ export class HeaderComponent implements OnInit {
    *                 - choice between English and German 
    */
   saveToLocalStorage(language: string) {
-    this.localStorage.setItem('language', language);
+    this.localStorageService.setItem('language', language);
   }
 
   /**
@@ -75,7 +74,7 @@ export class HeaderComponent implements OnInit {
    * This case is considered in this function: {@link retrieveActiveStatus()}
    */
   retrieveFromLocalStorage() {
-    this.activeLanguage = this.localStorage.getItem('language');
+    this.activeLanguage = this.localStorageService.getItem('language');
   }
 
   /**
