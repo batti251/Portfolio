@@ -1,8 +1,7 @@
 @use "./../../shared/index" as *;
 
 h2 {
-  @include textStyle($ff: "Syne", $fs: 78px, $fw: 800);
-  @include positionStyle($p: relative, $t: 80px, $zi: 1);
+  @include positionStyle($p: relative, $b: 140px, $zi: 1);
   @include padding($p: 10px);
   background-color: $primary;
 }
@@ -12,7 +11,6 @@ section {
   @include sizeStyle($h: unset, $w: 80%);
   @include padding($p: 80px 40px);
   @include dFlex($fd: column, $g: 24px);
-
   > .icon-list {
     @include dFlex($g: 96px);
     flex-wrap: wrap;
@@ -28,6 +26,74 @@ section {
       > span {
         @include textStyle($fw: 700, $lh: 120%);
       }
+
+      > .img-split {
+        @include sizeStyle($h: 75px, $w: 70px);
+        > .img-half {
+          @include sizeStyle($h: 75px, $w: 70px);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        > .sql {
+          background-image: url("./../../../assets/img/skills/icon_SQL.svg");
+        }
+        > .css {
+          background-image: url("./../../../assets/img/skills/icon_CSS.svg");
+        }
+        > .left {
+          position: relative;
+          bottom: 0px;
+        }
+        > .right {
+          position: relative;
+          bottom: 75px;
+        }
+
+        > .top {
+          position: relative;
+          bottom: 0px;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
+        }
+        > .middle {
+          position: relative;
+          bottom: 75px;
+          clip-path: polygon(0% 34%, 100% 34%, 100% 68%, 0% 68%);
+        }
+
+        > .bottom {
+          position: relative;
+          bottom: 150px;
+          clip-path: polygon(0% 100%, 100% 100%, 100% 67%, 0% 67%);
+        }
+
+        &:hover .right {
+          transition: 1s;
+          transform: translateX(15px);
+        }
+        &:hover .left {
+          transition: 1s;
+          transform: translateX(-15px);
+        }
+
+        &:hover > .top {
+          transition: 1s;
+          transform: translateX(-42px);
+          animation: shrink 1s forwards;
+          opacity: 0 !important;
+        }
+        &:hover > .bottom {
+          transition: 1s;
+          transition-delay: 0.6s;
+          transform: translateX(-42px);
+          opacity: 0 !important;
+        }
+        &:hover > .middle {
+          transition: 1s;
+          transition-delay: 0.3s;
+          transform: translateX(42px);
+          opacity: 0 !important;
+        }
+      }
     }
   }
   > .continue_learning {
@@ -39,28 +105,21 @@ section {
 .xRotate {
   &:hover > img {
     animation: xRotate 1s ease-in-out;
-    background-color: color-mix(in srgb, var(--skill-color) 70%, transparent);
-    box-shadow: 0px 0px 28px 12px var(--skill-color);
-    border-radius: 7%;
+    @include skillHover();
   }
 }
-
 
 .minRotate {
   &:hover > img {
     animation: minRotate 2s ease-in-out;
-    background-color: color-mix(in srgb, var(--skill-color) 70%, transparent);
-    box-shadow: 0px 0px 28px 12px var(--skill-color);
-    border-radius: 7%;
+    @include skillHover();
   }
 }
 
 .tipOver {
   &:hover > img {
     animation: tipOver 2s ease-in;
-    background-color: color-mix(in srgb, var(--skill-color) 70%, transparent);
-    box-shadow: 0px 0px 28px 12px var(--skill-color);
-    border-radius: 7%;
+    @include skillHover();
   }
 }
 
@@ -77,23 +136,13 @@ section {
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  h2 {
-    font-size: 2.5rem !important;
-    top: 60px !important;
-  }
-
   .icon-list {
     gap: 64px !important;
   }
 }
 
 @media screen and (max-width: 600px) {
-  h2 {
-    font-size: 2.25rem !important;
-  }
-
   section {
     padding: 80px 20px !important;
   }
@@ -139,73 +188,5 @@ section {
         left: 7px;
       }
     }
-  }
-}
-
-.img-split {
-  @include sizeStyle($h: 75px, $w: 70px);
-  > .img-half {
-    @include sizeStyle($h: 75px, $w: 70px);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  > .sql {
-    background-image: url("./../../../assets/img/skills/icon_SQL.svg");
-  }
-  > .css {
-    background-image: url("./../../../assets/img/skills/icon_CSS.svg");
-  }
-  > .left {
-    position: relative;
-    bottom: 0px;
-  }
-  > .right {
-    position: relative;
-    bottom: 75px;
-  }
-
-  > .top {
-    position: relative;
-    bottom: 0px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
-  }
-  > .middle {
-    position: relative;
-    bottom: 75px;
-    clip-path: polygon(0% 34%, 100% 34%, 100% 68%, 0% 68%);
-  }
-
-  > .bottom {
-    position: relative;
-    bottom: 150px;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 67%, 0% 67%);
-  }
-
-  &:hover .right {
-    transition: 1s;
-    transform: translateX(15px);
-  }
-  &:hover .left {
-    transition: 1s;
-    transform: translateX(-15px);
-  }
-
-  &:hover > .top {
-    transition: 1s;
-    transform: translateX(-42px);
-    animation: shrink 1s forwards;
-    opacity: 0 !important;
-  }
-  &:hover > .bottom {
-    transition: 1s;
-    transition-delay: 0.6s;
-    transform: translateX(-42px);
-    opacity: 0 !important;
-  }
-  &:hover > .middle {
-    transition: 1s;
-    transition-delay: 0.3s;
-    transform: translateX(42px);
-    opacity: 0 !important;
   }
 }

@@ -3,9 +3,6 @@
 section {
   @include dFlex($g: 72px, $fd: column);
   @include padding($p: 0px 10px);
-  > .title {
-    @include title();
-  }
   > .project-list {
     > .counter {
       display: none;
@@ -134,7 +131,6 @@ section {
     > .img-wrapper {
       > .preview {
         height: 360px !important;
-        /* width: unset !important; */
       }
     }
     > aside {

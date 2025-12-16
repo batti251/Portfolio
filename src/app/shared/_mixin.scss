@@ -112,9 +112,15 @@
 @mixin title {
   @include dFlex($g: 16px, $fd: column);
   > h2 {
-    @include textStyle($fw: 800, $fs: 3rem);
+    @include textStyle($fw: 800, $fs: 5rem, $ff: "Syne");
   }
   > span {
     text-align: center;
   }
+}
+
+@mixin skillHover($bs: 0px 0px 28px 12px var(--skill-color), $br: 7%, $bgc: color-mix(in srgb, var(--skill-color) 70%, transparent)){
+  box-shadow: $bs;
+  border-radius: $br;
+  background-color: $bgc;
 }

@@ -1,8 +1,8 @@
 @use './../../shared/index' as *;
 
-.title {
+/* .title {
   @include title();
-}
+} */
 
 .reference-wrap {
   @include dFlex($g: 20px);

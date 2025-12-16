@@ -3,10 +3,6 @@
 section {
   @include sizeStyle($h: 100%, $w: 90%);
   @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
-  > h2 {
-    @include textStyle($fs: 5rem, $ff: "Syne", $fw: 800);
-  }
-
   > .introduction {
     @include dFlex($g: 32px, $ai: flex-start, $jc: center);
     > article {
@@ -61,10 +57,6 @@ section {
       height: 460px !important;
       width: 349px !important;
     }
-  }
-
-  h2 {
-    font-size: 2.25rem !important;
   }
 
   img {

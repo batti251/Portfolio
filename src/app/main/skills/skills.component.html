@@ -1,5 +1,9 @@
-<h2>My skills</h2>
 <section id="my-skills">
+  <div class="title">
+    <h2>My skills</h2>
+    <span>{{ "reference.subtext" | translate }}</span>
+  </div>
+
   <div class="icon-list">
     @for (item of skills; track $index) {
     <div class="icon" [class]="item.animation + ' ' + item.color">
@@ -8,16 +12,13 @@
         <div class="img-half sql left"></div>
         <div class="img-half sql right"></div>
       </div>
-      }
-      @else if (item.animation == "quad") {
+      } @else if (item.animation == "quad") {
       <div class="img-split">
         <div class="img-half css top"></div>
         <div class="img-half css middle"></div>
         <div class="img-half css bottom"></div>
       </div>
-      }
-      
-      @else {
+      } @else {
       <img
         src="./../../../assets/img/skills/icon_{{ item.skill }}.svg"
         alt=""
@@ -33,7 +34,7 @@
       alt=""
     />
 
-    <span>{{ 'skills.phrase1' | translate}}</span>
-    <span>{{ 'skills.phrase2' | translate}}</span>
+    <span>{{ "skills.phrase1" | translate }}</span>
+    <span>{{ "skills.phrase2" | translate }}</span>
   </div>
 </section>

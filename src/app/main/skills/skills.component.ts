@@ -10,7 +10,8 @@ import { TranslatePipe } from "@ngx-translate/core";
 })
 export class SkillsComponent {
 
-  
+
+
 skills = [
   {skill: "HTML",
     color: "html",
