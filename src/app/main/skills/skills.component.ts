@@ -34,7 +34,7 @@ skills = [
   },
   {skill: "Git",
     color: "git",
-    animation: "xRotate"
+    animation: "tipOver"
   },
   {skill: "Firebase",
     animation: "rocket"
@@ -43,7 +43,7 @@ skills = [
     animation: "degRotate"
   },
   {skill: "Scrum",
-    animation: "degRotate"
+    animation: "minRotate"
   },
   {skill: "SQL",
     animation: "double"
