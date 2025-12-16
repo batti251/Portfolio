@@ -63,3 +63,13 @@ header {
 .show {
   display: flex !important;
 }
+
+@media screen and (max-height: 430px) {
+  header {
+    height: 60px;
+
+  }
+  .language-toggle {
+    display: none !important;
+  }
+}

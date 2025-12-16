@@ -249,3 +249,21 @@ section {
 span[class$="counter"] {
   @include textStyle($ff: "Syne" !important, $fw: 700, $lh: 120%, $fs: 3rem);
 }
+
+@media screen and (max-height: 430px) {
+  .project-list {
+    > .img-wrapper {
+      > .preview {
+        height: 220px !important;
+        width: 440px !important;
+      }
+    }
+    > .copunter{
+      width: 33% !important;
+    }
+  }
+
+  .project-description{
+    font-size: 14px !important;
+  }
+}

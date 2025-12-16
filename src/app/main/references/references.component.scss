@@ -56,3 +56,13 @@
     }
   }
 }
+
+@media screen and (max-height: 430px) {
+
+  .reference-wrap {
+    > .reference-container {
+      height: 480px !important;
+      gap: 8px !important;
+    }
+  }
+}

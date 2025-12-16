@@ -2,15 +2,7 @@
 
 .hero {
   @include dFlex($fd: column, $g: 16px);
-  /* @include padding(0 100px); */
-
   .title {
-    @include positionStyle($p: relative, $zi: 1);
-    @include backgroundStyle($bgs: contain, $bgc: $primary);
-    @include title();
-    > h1 {
-      @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 8rem);
-    }
     > .name-container {
       @include dFlex($g: 16px);
       max-width: 100vw;
@@ -112,4 +104,16 @@
   span {
     font-size: 1rem !important;
   }
+}
+
+
+
+@media screen and (max-height: 430px) {
+  .hero{
+    flex-direction: row !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+
 }

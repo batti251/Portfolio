@@ -190,3 +190,43 @@ section {
     }
   }
 }
+
+@media screen and (max-height: 430px) {
+  .icon-list {
+    gap: 48px !important;
+    > .icon {
+      height: 88px !important;
+      width: 88px !important;
+      > img {
+        height: 58px !important;
+        width: 46px !important;
+      }
+    }
+  }
+
+  .img-split {
+    height: 58px !important;
+    width: 46px !important;
+
+    > .img-half {
+      height: 58px !important;
+      width: 46px !important;
+    }
+    > .right {
+      bottom: 52px !important;
+    }
+
+    > .left {
+      bottom: -6px !important;
+    }
+    > .top {
+      bottom: -4px !important;
+    }
+    > .middle {
+      bottom: 54px !important;
+    }
+    > .bottom {
+      bottom: 112px !important;
+    }
+  }
+}

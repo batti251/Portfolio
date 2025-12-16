@@ -73,3 +73,18 @@ section {
     }
   }
 }
+
+@media screen and (max-height: 430px) {
+  article {
+    font-size: 1rem !important;
+  }
+
+  .introduction {
+    > figure {
+      > img {
+        width: 200px !important;
+        height: 260px !important;
+      }
+    }
+  }
+}

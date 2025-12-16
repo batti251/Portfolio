@@ -76,7 +76,7 @@ a {
 }
 
 h1 {
-  font-family: "Syne" !important;
+  @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 8rem);
 }
 
 .title {
@@ -111,6 +111,12 @@ h1 {
 }
 
 @media screen and (max-width: 360px) {
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-height: 430px) {
   h2 {
     font-size: 2rem !important;
   }
