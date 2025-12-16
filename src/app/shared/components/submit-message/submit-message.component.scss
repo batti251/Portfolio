@@ -1,0 +1,26 @@
+@use "./../../index.scss" as *;
+
+.message {
+    @include dFlex($fd: column, $g: 8px);
+    @include backgroundStyle($bgc: $primary);
+    @include borderStyle();
+    @include positionStyle($t: 50%, $l: 50%);
+    @include padding($p: 16px);
+    @include sizeStyle($h: 100px, $w:250px );
+    transform: translate(-50%, -50%);
+  > span {
+    @include textStyle($fc: $secondary);
+    white-space: pre-line;
+  }
+
+  > .checkmark {
+    @include sizeStyle($w: 3rem, $h: 3rem);
+    color: $success;
+
+    > path {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: draw-check 0.6s ease-out forwards;
+    }
+  }
+}

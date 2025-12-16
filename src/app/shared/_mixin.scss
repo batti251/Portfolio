@@ -43,7 +43,7 @@
   text-decoration: $td;
 }
 
-@mixin positionStyle($p: absolute, $t: 0, $r: 0, $b: 0, $l: 0, $zi: 0) {
+@mixin positionStyle($p: absolute, $t: unset, $r: unset, $b: unset, $l: unset, $zi: 0) {
   position: $p;
   top: $t;
   right: $r;

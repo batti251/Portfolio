@@ -11,7 +11,8 @@ import { TranslatePipe } from "@ngx-translate/core";
 import { FormsModule, NgForm } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
-
+import { EventEmitter } from '@angular/core';
+import { Output } from '@angular/core';
 @Component({
   selector: 'app-form',
   standalone: true,
@@ -22,6 +23,7 @@ import { HttpClient } from '@angular/common/http';
 export class FormComponent {
   router = inject(Router);
   http = inject(HttpClient);
+@Output() submitted = new EventEmitter();
 
   newMessage = {
     name: "",
@@ -52,7 +54,7 @@ policy = false;
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.submitted.emit()
         });
     } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();

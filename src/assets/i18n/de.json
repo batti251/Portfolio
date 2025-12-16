@@ -30,7 +30,7 @@
   "footer.form2.error": "Bitte gib eine valide E-Mail an",
   "footer.form3": "Deine Nachricht",
   "footer.form3.error": "Teile deine Gedanken!",
-  
+  "footer.submit.confirm": "Vielen Dank!\nDeine Nachricht wurde verschickt",
   "footer.policy.text1": " Ich habe die ",
   "footer.policy.highlight": "Datenschutzerklärung ",
   "footer.policy.text2" : "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."

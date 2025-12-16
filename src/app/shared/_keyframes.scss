@@ -230,3 +230,9 @@
     background-image: url("../../assets/img/header/header_burger.svg");
   }
 }
+
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

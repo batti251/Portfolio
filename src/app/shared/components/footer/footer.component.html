@@ -6,8 +6,8 @@
         <span>{{ 'footer.getInContact' | translate }}</span>
     </div>
 
-<app-form [ngClass]="{'hide': router.url == '/menu'}"></app-form>
-
+<app-form (submitted)="onFormSubmit()" [ngClass]="{'hide': router.url == '/menu'}"></app-form>
+<app-submit-message [visible]="showMessage"></app-submit-message>
 
 
 <mat-card class="footer-card">
