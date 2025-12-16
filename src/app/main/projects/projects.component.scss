@@ -253,30 +253,3 @@ section {
 span[class$="counter"] {
   @include textStyle($ff: "Syne" !important, $fw: 700, $lh: 120%, $fs: 3rem);
 }
-
-@keyframes swishFromLeft {
-  0% {
-    transform: translateX(-40%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes swishFromTop {
-  0% {
-    transform: translateY(-40%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes swishFromRight {
-  0% {
-    transform: translateX(40%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}

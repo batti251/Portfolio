@@ -32,7 +32,7 @@ ul {
   &:after {
     content: "";
     position: absolute;
-    top: 95px;
+    top: 96px;
     left: 0;
     height: 40%;
     width: 5px;
@@ -45,28 +45,6 @@ ul {
   }
   &:hover::after {
     animation: decreaseDown 0.25s forwards;
-  }
-}
-
-@keyframes expandLeft {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(150%);
-    width: 40%;
-    background: $highlight;
-  }
-}
-
-@keyframes decreaseDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-     top: 100%;
-    height: 0;
   }
 }
 

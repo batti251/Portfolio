@@ -50,43 +50,6 @@ header {
   animation: burger-close 0.85s ease-in-out forwards;
 }
 
-@keyframes burger-open {
-  25% {
-    background-image: url("../../../../assets/img/header/header_burger_t1.svg");
-  }
-  50% {
-    background-image: url("../../../../assets/img/header/header_burger_t2.svg");
-  }
-
-  75% {
-    background-image: url("../../../../assets/img/header/header_burger_t3.svg");
-  }
-
-  100% {
-    background-image: url("../../../../assets/img/header/header_burger_t4.close.svg");
-  }
-}
-
-@keyframes burger-close {
-  0% {
-    background-image: url("../../../../assets/img/header/header_burger_t4.close.svg");
-  }
-
-  25% {
-    background-image: url("../../../../assets/img/header/header_burger_t5.svg");
-  }
-  50% {
-    background-image: url("../../../../assets/img/header/header_burger_t6.svg");
-  }
-
-  75% {
-    background-image: url("../../../../assets/img/header/header_burger_t7.svg");
-  }
-
-  100% {
-    background-image: url("../../../../assets/img/header/header_burger.svg");
-  }
-}
 
 @media screen and (max-width: 600px) {
   header {

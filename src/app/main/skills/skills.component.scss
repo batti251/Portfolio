@@ -45,17 +45,6 @@ section {
   }
 }
 
-@keyframes xRotate {
-  0% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(-1);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 
 .minRotate {
   &:hover > img {
@@ -75,68 +64,6 @@ section {
   }
 }
 
-@keyframes tipOver {
-  0% {
-    position: relative;
-    left: 0%;
-    top: 0%;
-  }
-
-  10% {
-    left: 22%;
-    top: 7%;
-    transform: rotate(45deg);
-  }
-
-  20% {
-    left: 70%;
-    top: 7%;
-    transform: rotate(135deg);
-  }
-
-  30% {
-    left: 100%;
-    top: 0;
-    transform: rotate(180deg);
-  }
-
-  55% {
-    left: 100%;
-    top: 0;
-    transform: rotate(180deg);
-  }
-
-  80% {
-    left: 70%;
-    top: 7%;
-    transform: rotate(135deg);
-  }
-
-  90% {
-    left: 22%;
-    top: 7%;
-    transform: rotate(45deg);
-  }
-
-  100% {
-    position: relative;
-    left: 0%;
-    top: 0%;
-  }
-}
-
-@keyframes minRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(-360deg) scale(-1);
-  }
-  100% {
-    transform: rotate(720deg) scale(1);
-  }
-}
-
 .degRotate {
   &:hover > img {
     animation: degRotate 1.5s ease-in-out;
@@ -150,41 +77,6 @@ section {
   }
 }
 
-@keyframes rocket {
-  0% {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 100% 100%);
-  }
-  30% {
-    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-900px);
-    opacity: 1;
-  }
-  51% {
-    opacity: 0;
-  }
-
-  65% {
-    transform: translateY(900px);
-    clip-path: polygon(0% 100%, 100% 100%, 44% 0%, 100% -98%);
-    opacity: 0;
-  }
-
-  100% {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  }
-}
-
-@keyframes degRotate {
-  25% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1);
-  }
-}
 
 @media screen and (max-width: 768px) {
   h2 {
