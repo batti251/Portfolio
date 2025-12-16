@@ -14,7 +14,7 @@
   "skills.phrase1": "My Road is not finished.",
   "skills.phrase2": "It just started!",
   "projects.subtext": "Curious? Explore a selection of my previous projects here!",
-  "project.join" : "A Group-Project implementing a Kanban System, supported by Google-Firebase, to organize tasks within a Team. Add tasks, assign certain users to it and make sure to follow the Deadlines",
+  "project.join" : "Implementation of a Firebase-powered Kanban system for team task management with user assignment and deadlines. (Group-Project)",
   "project.sharkie" : "Object-Orientated 2D-Browser Game. Move Sharkie through the Deep Sea and face different Enemies.",
   "project.pokedex" : "A Pokemon Library based on the PokéAPI. ",
   "reference.title": "References",
