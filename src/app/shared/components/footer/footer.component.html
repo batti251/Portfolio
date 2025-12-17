@@ -1,4 +1,4 @@
-  <footer [ngClass]="{'unsetHeight': router.url == '/menu'}">
+  <footer [ngClass]="{'unsetHeight': router.url == '/menu' || '/imprint'}">
     <div class="greeting" id="contactform">
     <h3>Say Hi!</h3>
     </div>
@@ -6,14 +6,14 @@
         <span>{{ 'footer.getInContact' | translate }}</span>
     </div>
 
-<app-form (submitted)="onFormSubmit()" [ngClass]="{'hide': router.url == '/menu'}"></app-form>
+<app-form (submitted)="onFormSubmit()" [ngClass]="{'hide': router.url == '/menu' || '/imprint'}"></app-form>
 <app-submit-message [visible]="showMessage"></app-submit-message>
 
 
 <mat-card class="footer-card">
 <mat-card-content class="wrap-copyright">
     <a href="#"><img src="./../../../../assets/img/sb-icon-white.png" alt="own Logo"></a> 
-    <span class="footer-copyright"> &copy; Sebastian Bünz 2025</span>
+    <a class="footer-copyright" href="imprint">&copy; Sebastian Bünz 2025</a>
     
 </mat-card-content>
     

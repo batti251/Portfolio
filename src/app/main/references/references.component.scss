@@ -1,9 +1,5 @@
 @use './../../shared/index' as *;
 
-/* .title {
-  @include title();
-} */
-
 .reference-wrap {
   @include dFlex($g: 20px);
   @include padding($p: 20px);
@@ -30,9 +26,7 @@
       @include textStyle($fs: 14px, $lh: 120%);
     }
 
-    > .reference-text {
-      @include textStyle($fs: 18px, $lh: 120%);
-    }
+    
   }
 }
 

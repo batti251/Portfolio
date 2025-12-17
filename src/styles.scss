@@ -1,5 +1,4 @@
-@import 'app/shared/index';
-
+@import "app/shared/index";
 
 /* syne-regular - latin */
 @font-face {
@@ -79,7 +78,8 @@ h1 {
   @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 8rem);
 }
 
-.title {
+
+.title, h2 {
   @include title();
 }
 
@@ -96,8 +96,32 @@ h1 {
   overflow: hidden;
 }
 
+.reference-text {
+  @include textStyle($fs: 18px, $lh: 120%);
+}
+
+.paragraph {
+  width: 90%;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 6rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 5.5rem !important;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.25rem !important;
+  }
+
   h2 {
     font-size: 2.5rem !important;
     bottom: 112px !important;
@@ -105,8 +129,18 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+
   h2 {
     font-size: 2.25rem !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  h1 {
+    font-size: 2rem !important;
   }
 }
 
@@ -117,6 +151,10 @@ h1 {
 }
 
 @media screen and (max-height: 430px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
   h2 {
     font-size: 2rem !important;
   }

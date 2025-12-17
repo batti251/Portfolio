@@ -26,7 +26,7 @@
       [ngClass]="{
        'animate-burger-icon-open': animationReady && menuActive,
        'animate-burger-icon-close': animationReady && !menuActive,
-       'menu-close': router.url == '/'  || router.url.includes('#'),
+       'menu-close': router.url == '/'  || router.url.includes('#')  || '/imprint',
        'menu-open':router.url == '/menu',
      }"
     >

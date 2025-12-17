@@ -33,5 +33,13 @@
   "footer.submit.confirm": "Vielen Dank!\nDeine Nachricht wurde verschickt",
   "footer.policy.text1": " Ich habe die ",
   "footer.policy.highlight": "Datenschutzerklärung ",
-  "footer.policy.text2" : "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu."
+  "footer.policy.text2" : "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+
+  "imprint.ConditionDataMining.title" : "Vorbehalt der Nutzung für Text und Data Mining",
+  "imprint.ConditionDataMining.content" : "Vorbehalt der Nutzung für Text und Data Mining: Der Inhaber dieser Website gestattet die Nutzung oder das Herunterladen von Inhalten dieser Website durch Dritte für die Entwicklung, das Training oder den Betrieb von künstlicher Intelligenz oder anderen maschinellen Lernsystemen ('Text und Data Mining') ausschließlich mit ausdrücklicher schriftlicher Zustimmung des Inhabers. Ohne eine solche Zustimmung ist es untersagt, die Inhalte für Text und Data Mining zu verwenden. Dies gilt auch, wenn auf der Website keine Meta-Angaben vorhanden sind, die entsprechende Verfahren aussperren, und selbst dann, wenn Bots, die den Zweck haben, die Website zu Zwecken des Text und Data Mining auszulesen, nicht ausgesperrt werden.",
+  "imprint.liability.title": "Haftungs- und Schutzrechtshinweise",
+  "imprint.liability.content.p1" : "Haftungsausschluss: Die Inhalte dieses Onlineangebotes wurden sorgfältig und nach unserem aktuellen Kenntnisstand erstellt, dienen jedoch nur der Information und entfalten keine rechtlich bindende Wirkung, sofern es sich nicht um gesetzlich verpflichtende Informationen (z. B. das Impressum, die Datenschutzerklärung, AGB oder verpflichtende Belehrungen von Verbrauchern) handelt. Wir behalten uns vor, die Inhalte vollständig oder teilweise zu ändern oder zu löschen, soweit vertragliche Verpflichtungen unberührt bleiben. Alle Angebote sind freibleibend und unverbindlich.",
+  "imprint.liability.content.p2" : "Urheberrechte und Markenrechte: Alle auf dieser Website dargestellten Inhalte, wie Texte, Fotografien, Grafiken, Marken und Warenzeichen sind durch die jeweiligen Schutzrechte (Urheberrechte, Markenrechte) geschützt. Die Verwendung, Vervielfältigung usw. unterliegen unseren Rechten oder den Rechten der jeweiligen Urheber bzw. Rechteinhaber.",
+  "imprint.liability.content.p3" : "Hinweise auf Rechtsverstöße: Sollten Sie innerhalb unseres Internetauftritts Rechtsverstöße bemerken, bitten wir Sie uns auf diese hinzuweisen. Wir werden rechtswidrige Inhalte und Links nach Kenntnisnahme unverzüglich entfernen."
+
 }

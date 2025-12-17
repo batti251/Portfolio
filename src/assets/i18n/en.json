@@ -18,7 +18,7 @@
   "project.sharkie" : "Object-Orientated 2D-Browser Game. Move Sharkie through the Deep Sea and face different Enemies.",
   "project.pokedex" : "A Pokemon Library based on the PokéAPI. ",
   "reference.title": "References",
-  "reference.subtext": "I thrive both independently and as part of a team. Here’s what my colleagues have to say about working with me.",
+  "reference.subtext": "I thrive both independently and as part of a team. Here`s what my colleagues have to say about working with me.",
   "reference.ozan" : "Sebastian's strength in understanding difficult tasks and breaking them down into smaller pieces and organizing them was extremely helpful to the group. He was always very cooperative and really helped the group with his feedback. With him, the work progressed very well. Everyone wants a Sebastian in their group.",
   "reference.felix" : "Sebastian was an exemplary teammate in every respect during our group project Join. He was an extremely reliable and effective teammate in terms of both planning and organizational work and operational implementation. Even in challenging situations during the project, Sebastian always acted calmly and thoroughly and developed solutions with great commitment. He was a very valuable teammate in every respect, and I really enjoyed working with him.",
 
@@ -33,8 +33,14 @@
   "footer.submit.confirm": "Thank you!\nYour message has been sent",
   "footer.policy.text1" : " I've read the ",
   "footer.policy.highlight": "privacy policy ",
-  "footer.policy.text2" : "and agree to processing of my data as outlined"
+  "footer.policy.text2" : "and agree to processing of my data as outlined",
 
-   
+  "imprint.ConditionDataMining.title" : "Conditions of use for text and data mining",
+  "imprint.ConditionDataMining.content" : "Conditions of use for text and data mining: The owner of this website permits the use or downloading of content from this website by third parties for the development, training, or operation of artificial intelligence or other machine learning systems ('text and data mining') exclusively with the express written consent of the owner. Without such consent, it is prohibited to use the content for text and data mining. This also applies if there is no meta information on the website that blocks such processes, and even if bots whose purpose is to read the website for text and data mining purposes are not blocked.",
+  "imprint.liability.title": "Liability and intellectual property rights notices",
+  "imprint.liability.content.p1" : "Disclaimer: The contents of this online offering have been compiled carefully and to the best of our current knowledge, but are for informational purposes only and have no legally binding effect, unless they are legally required information (e.g., legal notice, privacy policy, terms and conditions, or mandatory consumer information). We reserve the right to change or delete the content in whole or in part, provided that contractual obligations remain unaffected. All offers are subject to change and non-binding.",
+  "imprint.liability.content.p2" : "Intellectual property rights and trademark rights: All content presented on this website, such as text, photographs, graphics, brands, and trademarks, is protected by the respective intellectual property rights (copyrights, trademark rights). The use, reproduction, etc. of this content is subject to our rights or the rights of the respective authors or rights holders.",
+  "imprint.liability.content.p3" : "Notification of legal violations: Should you notice any legal violations on our website, please notify us. We will remove any illegal content and links immediately upon becoming aware of them."
+
 
 } 
