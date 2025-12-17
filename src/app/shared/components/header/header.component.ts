@@ -1,10 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
-
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -21,8 +20,8 @@ export class HeaderComponent implements OnInit {
   router = inject(Router);
   private translate = inject(TranslateService);
 
-  constructor(private localStorageService: LocalStorageService) {
-    
+  constructor(private localStorageService: LocalStorageService, private location: Location) {
+
   }
 
   /**
@@ -32,10 +31,10 @@ export class HeaderComponent implements OnInit {
     this.retrieveActiveStatus();
   }
 
-/**
- * This Function sets the current language according to the local storage key
- * If the value is null (no key is set, yet), the default language is English
- */
+  /**
+   * This Function sets the current language according to the local storage key
+   * If the value is null (no key is set, yet), the default language is English
+   */
   retrieveActiveStatus() {
     this.retrieveFromLocalStorage();
     switch (this.activeLanguage) {
@@ -79,13 +78,16 @@ export class HeaderComponent implements OnInit {
 
   /**
    * This Function handles the burger-menu navigation
+   * It either navigates to the menu-component, or to the previous visited page
    */
   navigateToMenu() {
     this.animationReady = true;
     if (this.router.url != '/menu') {
       this.navigateToMenupage();
     } else {
-      this.navigateToMainpage()
+      this.menuActive = false;
+      this.location.back();
+
     }
   }
 
@@ -100,17 +102,4 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/menu'])
     }, 800);
   }
-
-  /**
-   * This Function navigates back to the Main page
-   * It sets a 800ms timer, before navigation
-   * It sets menuActive to false, for burger-animation (X -> burger)
-   */
-  navigateToMainpage() {
-    this.menuActive = false
-    setTimeout(() => {
-      this.router.navigate([''])
-    }, 800);
-  }
-
 }

@@ -26,11 +26,12 @@
       [ngClass]="{
        'animate-burger-icon-open': animationReady && menuActive,
        'animate-burger-icon-close': animationReady && !menuActive,
-       'menu-close': router.url == '/'  || router.url.includes('#')  || '/imprint',
-       'menu-open':router.url == '/menu',
+       'menu-close': !menuActive,
+       'menu-open': menuActive,
      }"
     >
-      <a mat-button (click)="navigateToMenu()"> </a>
+      <a mat-button (click)="navigateToMenu()"
+      > </a>
     </div>
   </div>
 </header>
