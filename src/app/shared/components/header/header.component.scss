@@ -9,7 +9,8 @@ header {
   width: 100vw;
   box-sizing: border-box;
   > .initial-icon {
-    > img {
+
+    > a img {
       @include sizeStyle($h: 30px, $w: 66.67px);
     }
   }
