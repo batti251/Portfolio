@@ -16,8 +16,8 @@ export const appConfig: ApplicationConfig = {
     anchorScrolling: 'enabled'
   })), provideAnimations(), provideHttpClient(),
   provideTranslateService({
-    lang: 'en',
-    fallbackLang: 'en',
+    lang: 'en-GB',
+    fallbackLang: 'en-GB',
     loader: provideTranslateHttpLoader({
       prefix: './../assets/i18n/',
       suffix: '.json'

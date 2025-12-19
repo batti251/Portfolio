@@ -14,7 +14,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 
 
 export class HeaderComponent implements OnInit {
-  activeLanguage: string | null = "en";
+  activeLanguage: string | null = "en-GB";
   menuActive = false;
   animationReady = false;
   router = inject(Router);
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
     this.retrieveFromLocalStorage();
     switch (this.activeLanguage) {
       case null:
-        this.activeLanguage = 'en'
+        this.activeLanguage = 'en-GB'
         break;
       default: this.activeLanguage
         break;
