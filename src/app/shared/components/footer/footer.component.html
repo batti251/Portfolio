@@ -1,4 +1,4 @@
-  <footer [ngClass]="{'unsetHeight': router.url == '/menu' || '/imprint'}">
+  <footer [ngClass]="{'unsetHeight': router.url == '/menu' || router.url == '/imprint'}">
     <div class="greeting" id="contactform">
     <h3>Say Hi!</h3>
     </div>
@@ -6,7 +6,7 @@
         <span>{{ 'footer.getInContact' | translate }}</span>
     </div>
 
-<app-form (submitted)="onFormSubmit()" [ngClass]="{'hide': router.url == '/menu' || '/imprint'}"></app-form>
+<app-form (submitted)="onFormSubmit()" [ngClass]="{'hide': router.url == '/menu' || router.url ==  '/imprint'}"></app-form>
 <app-submit-message [visible]="showMessage"></app-submit-message>
 
 
