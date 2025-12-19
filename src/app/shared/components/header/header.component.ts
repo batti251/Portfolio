@@ -86,8 +86,9 @@ export class HeaderComponent implements OnInit {
       this.navigateToMenupage();
     } else {
       this.menuActive = false;
-      this.location.back();
-
+      setTimeout(() => {
+        this.location.back();
+      }, 500);
     }
   }
 
@@ -100,6 +101,6 @@ export class HeaderComponent implements OnInit {
     this.menuActive = true
     setTimeout(() => {
       this.router.navigate(['/menu'])
-    }, 800);
+    }, 500);
   }
 }

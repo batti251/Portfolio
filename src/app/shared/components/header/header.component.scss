@@ -44,11 +44,13 @@ header {
 }
 
 .animate-burger-icon-open {
-  animation: burger-open 0.85s ease-in-out forwards;
+  animation: burger-open 0.55s ease-out forwards;
+  @include backgroundStyle($bgs: contain);
 }
 
 .animate-burger-icon-close {
-  animation: burger-close 0.85s ease-in-out forwards;
+  animation: burger-close 0.55s ease-out forwards;
+  @include backgroundStyle($bgs: contain);
 }
 
 

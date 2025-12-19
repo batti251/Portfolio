@@ -207,13 +207,10 @@
 }
 
 @keyframes burger-close {
-  0% {
-    background-image: url("../../assets/img/header/header_burger_t4.close.svg");
-  }
-
   25% {
     background-image: url("../../assets/img/header/header_burger_t5.svg");
   }
+  
   50% {
     background-image: url("../../assets/img/header/header_burger_t6.svg");
   }

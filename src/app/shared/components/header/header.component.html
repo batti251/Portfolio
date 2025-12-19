@@ -26,8 +26,8 @@
       [ngClass]="{
        'animate-burger-icon-open': animationReady && menuActive,
        'animate-burger-icon-close': animationReady && !menuActive,
-       'menu-close': !menuActive,
-       'menu-open': menuActive,
+       'menu-close': !animationReady && !menuActive,
+       'menu-open': !animationReady && menuActive,
      }"
     >
       <a mat-button (click)="navigateToMenu()"
