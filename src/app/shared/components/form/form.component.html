@@ -85,5 +85,5 @@
     }}</a>
      <span>{{ "footer.policy.text2" | translate }}</span>
   </p>
-    <input class="button" type="submit" value="Send Email" [disabled]="!policy && !contactForm.valid"/>
+    <input class="button" type="submit" value="Send Email" [disabled]="!policy || !contactForm.valid"/>
 </form>
