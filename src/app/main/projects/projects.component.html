@@ -33,10 +33,10 @@
         <span class="project-skills"> {{ item.skills.join(" | ") }} </span>
         <span class="project-description">{{'project.'+  (item.title | lowercase) | translate}}</span>
         <span class="external-links">
-          <a mat-stroked-button class="button" [href]="item.git" target="_blank"
+          <a mat-stroked-button class="button" [href]="item.git" target="_blank" rel="noopener noreferrer"
             ><strong>GitHub</strong></a
           >
-          <a mat-stroked-button class="button" [href]="item.url" target="_blank"
+          <a mat-stroked-button class="button" [href]="item.url" target="_blank" rel="noopener noreferrer"
             ><strong>Link</strong></a
           ></span
         >

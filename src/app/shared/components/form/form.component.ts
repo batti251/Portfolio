@@ -13,10 +13,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter } from '@angular/core';
 import { Output } from '@angular/core';
+import {RouterLink} from '@angular/router';
+
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, MatSelectModule, MatButtonModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe, FormsModule],
+  imports: [CommonModule, MatSelectModule, MatButtonModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe, FormsModule, RouterLink],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
