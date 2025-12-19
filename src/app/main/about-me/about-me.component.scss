@@ -45,6 +45,13 @@ section {
     width: 90% !important;
   }
 
+  figure {
+    img {
+      height: 460px !important;
+      width: 333px !important;
+    }
+  }
+
   .introduction {
     flex-direction: column !important;
     align-items: center !important;
