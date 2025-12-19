@@ -7,13 +7,34 @@ section{
 
 }
 
+h1 {
+  @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 3rem);
+}
+
 h2{
     width: 90%;
     @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 1.5rem)
 }
 
 
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 2.756rem !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem !important;
+  }
+
   h2 {
     font-size: 1.25rem !important;
     bottom: 112px !important;
@@ -21,16 +42,25 @@ h2{
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.25rem !important;
+  }
   h2 {
     font-size: 1rem !important;
   }
 }
 
 @media screen and (max-width: 440px) {
-
+      h1 {
+    font-size: 1.175rem !important;
+  }
 }
 
 @media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1rem !important;
+  }
+
   h2 {
     font-size: 1rem !important;
   }

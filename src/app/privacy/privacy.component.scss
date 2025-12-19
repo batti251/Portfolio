@@ -7,7 +7,6 @@ section {
 }
 
 h1 {
- /*  width: 90%; */
   @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 3rem);
 }
 
