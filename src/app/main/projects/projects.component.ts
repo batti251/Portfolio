@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -11,16 +11,27 @@ import { TranslatePipe } from "@ngx-translate/core";
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent implements OnInit{
+export class ProjectsComponent implements OnInit,AfterViewInit {
+  @ViewChildren('elements', { read: ElementRef })
+  elements!: QueryList<ElementRef<HTMLElement>>;
   videoUrls: SafeResourceUrl[] = [];
   public screenWidth: any;
-
-
+private observer!: IntersectionObserver;
  constructor(private sanitizer: DomSanitizer) {
   this.videoUrls = this.projects.map(p =>
     this.sanitizer.bypassSecurityTrustResourceUrl(p.url)
   );
 }
+
+
+ngAfterViewInit(): void {
+this.observeElements();
+}
+
+ngOnDestroy(): void {
+  this.observer?.disconnect();
+}
+
 ngOnInit() {
       this.screenWidth = window.innerWidth;
 }
@@ -28,6 +39,25 @@ ngOnInit() {
   onResize() {
     this.screenWidth = window.innerWidth;
   }
+
+
+/**
+ * This Function sets up an IntersectionObserver to toggle in-view-class 
+ * It's triggered when elements reach 40% visibility.
+ * 
+ */
+observeElements(){
+ this.observer = new IntersectionObserver(
+    (entries) => {
+      for (let entry of entries) {
+        let element = entry.target as HTMLElement;
+        let inView = entry.intersectionRatio >= 0.4;
+        element.classList.toggle('in-view', inView);
+      }},
+    {threshold: [0, 0.4, 1]}
+  );
+  this.elements.forEach(element => this.observer.observe(element.nativeElement));
+}
 
 
   projects = [{
@@ -47,7 +77,7 @@ ngOnInit() {
   {
     title: 'Pokedex',
     skills: ['JavaScript', 'HTML', 'CSS', 'API'],
-    imgsrc: './../../../assets/img/thumbnail/pokedex.svg',
+    imgsrc: './../../../assets/img/thumbnail/pokedex_1.png',
     git: 'https://github.com/batti251/Pokedex',
     url: 'https://pokedex.sebastian-buenz.de/'
   }

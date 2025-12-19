@@ -52,29 +52,29 @@ section {
         }
       }
     }
-    &:hover .project-info {
-      display: flex !important;
-      animation: swishFromLeft 0.5s forwards;
-    }
+    &.in-view .project-info {
+  display: flex !important;
+  animation: swishFromLeft 0.5s forwards;
+}
 
-    &:hover .reverse-animation {
+    &.in-view .reverse-animation {
       display: flex !important;
       animation: swishFromRight 0.5s forwards;
     }
 
-    &:hover .preview {
+    &.in-view .preview {
       outline: 4px black solid;
       outline-offset: -32px;
     }
-    &:hover .img-wrapper {
+    &.in-view .img-wrapper {
       filter: brightness(1);
       transition: 1s ease-out;
     }
 
-    &:hover .img-wrapper::after {
+    &.in-view .img-wrapper::after {
       transform: translateY(-50%) rotate(135deg) scale(1) !important;
     }
-    &:hover .mirrored::after {
+    &.in-view .mirrored::after {
       transform: translateY(-50%) rotate(-135deg) scale(1) !important;
     }
   }

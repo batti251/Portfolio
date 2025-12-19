@@ -7,7 +7,8 @@
   </div>
 
   @for (item of projects; track $index) {
-  <div class="project-list" [class.reversed]="$odd">
+  <div class="project-list"[class.reversed]="$odd"
+  #elements >
     <span class="counter"
       ><strong>{{ $index + 1 }} / {{ projects.length }}</strong></span
     >
