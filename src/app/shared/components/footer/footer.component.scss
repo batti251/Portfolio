@@ -6,13 +6,20 @@
   align-items: flex-start;
 }
 
-footer {
+section {
   @include backgroundStyle($bgc: $secondary);
+  clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 0px));
+  @include dFlex();
+  max-width: unset;
+  width: 100%;
+}
+
+footer {
   @include sizeStyle($h: 100%, $w: 100%);
   min-height: 800px;
+  max-width: 1920px;
   @include dFlex($fd: column, $g: 48px, $jc: space-evenly);
   padding: 100px 0 0 0;
-  clip-path: polygon(0% 0%, 100% 100px, 100% 100%, 0% calc(100% - 0px));
 }
 
 .greeting {

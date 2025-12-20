@@ -5,7 +5,7 @@ section {
   @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
   
   > .introduction {
-    @include dFlex($g: 32px, $ai: flex-start, $jc: center);
+    @include dFlex($g: 32px, $ai: flex-start, $jc: space-between);
     > article {
       @include dFlex($fd: column, $g: 24px, $ai: center, $jc: unset);
       @include sizeStyle($h: 100%, $w: 50%);

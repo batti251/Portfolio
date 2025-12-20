@@ -1,4 +1,4 @@
-@use './../../index.scss' as *;
+@use "./../../index.scss" as *;
 @use "./../../../../styles.scss" as *;
 
 header {
@@ -7,9 +7,9 @@ header {
   max-width: 100%;
   height: 92px;
   width: 100vw;
+  max-width: 1920px;
   box-sizing: border-box;
   > .initial-icon {
-
     > a img {
       @include sizeStyle($h: 30px, $w: 66.67px);
     }
@@ -53,7 +53,6 @@ header {
   @include backgroundStyle($bgs: contain);
 }
 
-
 @media screen and (max-width: 600px) {
   header {
     padding: 0 30px;
@@ -70,7 +69,6 @@ header {
 @media screen and (max-height: 430px) {
   header {
     height: 60px;
-
   }
   .language-toggle {
     display: none !important;

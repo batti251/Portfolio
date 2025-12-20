@@ -15,7 +15,7 @@ section {
       > .preview {
         @include sizeStyle($h: 600px, $w: 720px);
         max-width: 100%;
-        @include padding(0px 50px 42px 0px);
+        @include padding(0px 40px 42px 0px);
       }
 
       &::after {
@@ -178,7 +178,7 @@ section {
       > .preview {
         height: 260px !important;
         width: 440px !important;
-        padding: 0px 32px 50px 0px !important;
+        padding: 0px 24px 50px 0px !important;
         outline-offset: -24px !important;
       }
       &::after {

@@ -18,3 +18,11 @@ app-skills {
 app-projects {
     @include dFlex($fd: column);
 }
+
+app-references {
+    @include dFlex();
+} 
+
+app-arrow {
+    @include dFlex();
+}

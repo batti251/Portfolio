@@ -1,6 +1,15 @@
+@use './shared/index.scss' as *;
+
 app-header{
     position: fixed;
     z-index: 999;
     background-color: #fffcf3;
+    @include dFlex();
+    width: 100%;
+
 }
 
+
+app-footer{
+    @include dFlex();
+}
