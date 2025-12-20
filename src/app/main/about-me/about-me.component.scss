@@ -3,6 +3,7 @@
 section {
   @include sizeStyle($h: 100%, $w: 90%);
   @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
+  
   > .introduction {
     @include dFlex($g: 32px, $ai: flex-start, $jc: center);
     > article {
