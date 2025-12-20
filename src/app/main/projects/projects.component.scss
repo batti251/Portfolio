@@ -2,7 +2,6 @@
 
 section {
   @include dFlex($g: 72px, $fd: column);
-  @include padding($p: 0px 10px);
   > .project-list {
     > .counter {
       display: none;

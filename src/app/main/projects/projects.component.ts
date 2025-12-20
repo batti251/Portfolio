@@ -74,13 +74,6 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
     imgsrc: './../../../assets/img/thumbnail/sharkie.svg',
     git: 'https://github.com/batti251/Sharkie',
     url: 'https://sharkie.sebastian-buenz.de/'
-  },
-  {
-    title: 'Pokedex',
-    skills: ['JavaScript', 'HTML', 'CSS', 'API'],
-    imgsrc: './../../../assets/img/thumbnail/pokedex_1.png',
-    git: 'https://github.com/batti251/Pokedex',
-    url: 'https://pokedex.sebastian-buenz.de/'
   }
   ]
 
