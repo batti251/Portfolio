@@ -45,8 +45,14 @@ footer {
     }
   }
 
-  > .external-links {
-    @include dFlex($g: 16px);
+  > .links {
+    @include dFlex($g: 16px, $fd: column);
+    > .external-links {
+      @include dFlex();
+    }
+    > a {
+      @include textStyle($fc: #fffcf3, $fw: 400, $fs: 1rem);
+    }
   }
 }
 
