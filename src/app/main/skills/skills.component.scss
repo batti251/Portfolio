@@ -1,104 +1,115 @@
 @use "./../../shared/index" as *;
 
 h2 {
-  @include positionStyle($p: relative, $b: 140px, $zi: 1);
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 70%;
+  background-color: #fffcf3;
   @include padding($p: 10px);
   background-color: $primary;
 }
 
 section {
-  @include borderStyle($bc: $secondary, $bw: 4px);
   @include sizeStyle($h: unset, $w: 90%);
-  @include padding($p: 80px 0);
-  @include dFlex($fd: column, $g: 24px);
-  > .icon-list {
-    @include dFlex($g: 96px);
-    flex-wrap: wrap;
+  > .border-wrap {
+    @include dFlex($fd: column, $g: 24px);
+    @include borderStyle($bc: $secondary, $bw: 4px);
+    margin: 20px 0 0 0;
+    padding: 80px 0 0 0;
 
-    > .icon {
-      @include sizeStyle($h: 104px, $w: 100px);
-      @include dFlex($fd: column, $g: 10px);
+    > .continue_learning {
+      @include dFlex($fd: column, $g: 8px);
+      width: 100%;
+    }
 
-      > img {
-        @include sizeStyle($h: 75px, $w: 70px);
-      }
+    > .icon-list {
+      @include dFlex($g: 96px);
+      flex-wrap: wrap;
 
-      > span {
-        @include textStyle($fw: 700, $lh: 120%);
-      }
+      > .icon {
+        @include sizeStyle($h: 104px, $w: 100px);
+        @include dFlex($fd: column, $g: 10px);
 
-      > .img-split {
-        @include sizeStyle($h: 75px, $w: 70px);
-        > .img-half {
+        > img {
           @include sizeStyle($h: 75px, $w: 70px);
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        > .sql {
-          background-image: url("./../../../assets/img/skills/icon_SQL.svg");
-        }
-        > .css {
-          background-image: url("./../../../assets/img/skills/icon_CSS.svg");
-        }
-        > .left {
-          position: relative;
-          bottom: 0px;
-        }
-        > .right {
-          position: relative;
-          bottom: 75px;
         }
 
-        > .top {
-          position: relative;
-          bottom: 0px;
-          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
-        }
-        > .middle {
-          position: relative;
-          bottom: 75px;
-          clip-path: polygon(0% 34%, 100% 34%, 100% 68%, 0% 68%);
+        > span {
+          @include textStyle($fw: 700, $lh: 120%);
         }
 
-        > .bottom {
-          position: relative;
-          bottom: 150px;
-          clip-path: polygon(0% 100%, 100% 100%, 100% 67%, 0% 67%);
-        }
+        > .img-split {
+          @include sizeStyle($h: 75px, $w: 70px);
+          > .img-half {
+            @include sizeStyle($h: 75px, $w: 70px);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+          > .sql {
+            background-image: url("./../../../assets/img/skills/icon_SQL.svg");
+          }
+          > .css {
+            background-image: url("./../../../assets/img/skills/icon_CSS.svg");
+          }
+          > .left {
+            position: relative;
+            bottom: 0px;
+          }
+          > .right {
+            position: relative;
+            bottom: 75px;
+          }
 
-        &:hover .right {
-          transition: 1s;
-          transform: translateX(15px);
-        }
-        &:hover .left {
-          transition: 1s;
-          transform: translateX(-15px);
-        }
+          > .top {
+            position: relative;
+            bottom: 0px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 35%);
+          }
+          > .middle {
+            position: relative;
+            bottom: 75px;
+            clip-path: polygon(0% 34%, 100% 34%, 100% 68%, 0% 68%);
+          }
 
-        &:hover > .top {
-          transition: 1s;
-          transform: translateX(-42px);
-          animation: shrink 1s forwards;
-          opacity: 0 !important;
-        }
-        &:hover > .bottom {
-          transition: 1s;
-          transition-delay: 0.6s;
-          transform: translateX(-42px);
-          opacity: 0 !important;
-        }
-        &:hover > .middle {
-          transition: 1s;
-          transition-delay: 0.3s;
-          transform: translateX(42px);
-          opacity: 0 !important;
+          > .bottom {
+            position: relative;
+            bottom: 150px;
+            clip-path: polygon(0% 100%, 100% 100%, 100% 67%, 0% 67%);
+          }
+
+          &:hover .right {
+            transition: 1s;
+            transform: translateX(15px);
+          }
+          &:hover .left {
+            transition: 1s;
+            transform: translateX(-15px);
+          }
+
+          &:hover > .top {
+            transition: 1s;
+            transform: translateX(-42px);
+            animation: shrink 1s forwards;
+            opacity: 0 !important;
+          }
+          &:hover > .bottom {
+            transition: 1s;
+            transition-delay: 0.6s;
+            transform: translateX(-42px);
+            opacity: 0 !important;
+          }
+          &:hover > .middle {
+            transition: 1s;
+            transition-delay: 0.3s;
+            transform: translateX(42px);
+            opacity: 0 !important;
+          }
         }
       }
     }
-  }
-  > .continue_learning {
-    @include dFlex($fd: column, $g: 8px);
-    width: 100%;
   }
 }
 
@@ -136,21 +147,13 @@ section {
   }
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
   .icon-list {
     gap: 64px !important;
   }
 }
 
 @media screen and (max-width: 600px) {
-  section {
-    padding: 80px 0px !important;
-  }
-
   .icon-list {
     gap: 32px !important;
   }
