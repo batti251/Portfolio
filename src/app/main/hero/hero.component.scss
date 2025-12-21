@@ -2,6 +2,8 @@
 
 .hero {
   @include dFlex($fd: column, $g: 16px);
+  @include sizeStyle($h: 100vh, $w: 100%);
+  max-width: 1920px;
   .title {
     > .name-container {
       @include dFlex($g: 16px);
@@ -29,7 +31,7 @@
 }
 
 .arrow-container {
-  @include sizeStyle($h: 230px, $w: 116px);
+  @include sizeStyle($h: 230px, $w: 86px);
   @include dFlex($fd: column, $jc: end);
   > .arrow-animation {
     @include positionStyle($zi: -1);
@@ -47,6 +49,18 @@
     animation-delay: 2.1s;
   }
 }
+
+/*  @media screen and (min-width: 1921px) {
+  .hero {
+    padding: unset !important;
+  }
+} */
+
+/* @media screen and (max-width: 1920px) {
+  .hero {
+    padding: 0 100px !important;
+  }
+} */
 
 
 @media screen and (max-width: 1200px) {
@@ -82,7 +96,6 @@
 }
 
 @media screen and (max-width: 440px) {
-
   .name {
     font-size: 1rem !important;
   }
@@ -92,11 +105,8 @@
   }
 }
 
-
-
 @media screen and (max-height: 430px) {
-  .hero{
+  .hero {
     flex-direction: row !important;
   }
-
 }

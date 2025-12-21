@@ -3,10 +3,8 @@
 
 header {
   @include dFlex($jc: space-between);
-  @include padding($p: 30px 100px);
   max-width: 100%;
-  height: 92px;
-  width: 100vw;
+  @include sizeStyle($h: 92px, $w: 90%);
   max-width: 1920px;
   box-sizing: border-box;
   > .initial-icon {
@@ -26,11 +24,11 @@ header {
     }
     > .menu-open {
       background-image: url("../../../../assets/img/header/header_burger_t4.close.svg");
-      @include backgroundStyle($bgs: contain);
+      @include backgroundStyle($bgs: contain, $bgp: 100% 50%);
     }
     > .menu-close {
       background-image: url("../../../../assets/img/header/header_burger.svg");
-      @include backgroundStyle($bgs: contain);
+      @include backgroundStyle($bgs: contain, $bgp: 100% 50%);
     }
   }
 }
@@ -53,10 +51,22 @@ header {
   @include backgroundStyle($bgs: contain);
 }
 
-@media screen and (max-width: 600px) {
-  header {
-    padding: 0 30px;
+/* @media screen and (min-width : 1921px){
+  header{
+    padding: 30px 0 !important;
   }
+}
+
+@media screen and (max-width : 1920px){
+  header {
+    padding: 30px 100px !important;
+  }
+}
+ */
+@media screen and (max-width: 600px) {
+/*   header {
+    padding: 0 30px;
+  } */
   .language-toggle {
     display: none !important;
   }

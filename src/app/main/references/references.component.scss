@@ -33,17 +33,22 @@
   .reference-container {
     height: 600px !important;
   }
+
+  .reference-wrap {
+    padding: unset !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  section {
-    padding: 12px !important;
-  }
+/*   section {
+    padding: 0 50px !important;
+  } */
+
   .reference-wrap {
     flex-direction: column !important;
+    padding: 0 20px !important;
     > .reference-container {
       height: unset !important;
-      max-width: 397.33px !important;
       width: 100% !important;
     }
   }

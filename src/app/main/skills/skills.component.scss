@@ -8,8 +8,8 @@ h2 {
 
 section {
   @include borderStyle($bc: $secondary, $bw: 4px);
-  @include sizeStyle($h: unset, $w: 80%);
-  @include padding($p: 80px 40px);
+  @include sizeStyle($h: unset, $w: 90%);
+  @include padding($p: 80px 0);
   @include dFlex($fd: column, $g: 24px);
   > .icon-list {
     @include dFlex($g: 96px);
@@ -136,7 +136,11 @@ section {
   }
 }
 
+
+
+
 @media screen and (max-width: 768px) {
+
   .icon-list {
     gap: 64px !important;
   }
@@ -144,7 +148,7 @@ section {
 
 @media screen and (max-width: 600px) {
   section {
-    padding: 80px 20px !important;
+    padding: 80px 0px !important;
   }
 
   .icon-list {

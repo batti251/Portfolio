@@ -3,7 +3,9 @@
 section {
   @include sizeStyle($h: 100%, $w: 90%);
   @include dFlex($fd: column, $g: 48px, $ai: unset, $jc: unset);
-  
+  > .title {
+    align-items: start;
+  }
   > .introduction {
     @include dFlex($g: 32px, $ai: flex-start, $jc: space-between);
     > article {
@@ -42,8 +44,11 @@ section {
 }
 
 @media screen and (max-width: 920px) {
+   .title {
+    align-items: center !important;
+  }
   article {
-    width: 90% !important;
+    width: 100% !important;
   }
 
   figure {
