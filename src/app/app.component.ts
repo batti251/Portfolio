@@ -27,11 +27,9 @@ export class AppComponent implements AfterViewInit {
     const id = location.hash.slice(1);
     if (!id) return;
     this.scroller.setOffset([0, 100]);
-    
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        this.scroller.scrollToAnchor(id);
-      });
-    });
+
+    setTimeout(() => {
+    this.scroller.scrollToAnchor(id);
+  }, 100);
   }
 }
