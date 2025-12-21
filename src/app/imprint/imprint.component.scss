@@ -1,21 +1,21 @@
-@use './../shared/index.scss' as *;
+@use "./../shared/index.scss" as *;
 
-section{
-    @include sizeStyle($h: auto, $w: 100%);
-    @include dFlex($jc: flex-start, $fd: column, $g: 24px);
-    @include padding($p: 90px 0 36px 0 );
 
+section {
+  @include sizeStyle($h: auto, $w: 100%);
+  @include dFlex($jc: flex-start, $fd: column, $g: 24px);
+  @include padding($p: 90px 0 36px 0);
+  max-width: unset !important;
 }
 
 h1 {
   @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 3rem);
 }
 
-h2{
-    width: 90%;
-    @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 1.5rem)
+h2 {
+  width: 90%;
+  @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 1.5rem);
 }
-
 
 @media screen and (max-width: 1200px) {
   h1 {
@@ -28,7 +28,6 @@ h2{
     font-size: 2.5rem !important;
   }
 }
-
 
 @media screen and (max-width: 768px) {
   h1 {
@@ -51,7 +50,7 @@ h2{
 }
 
 @media screen and (max-width: 440px) {
-      h1 {
+  h1 {
     font-size: 1.175rem !important;
   }
 }
