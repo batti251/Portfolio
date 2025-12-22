@@ -2,7 +2,7 @@
 
 
 section {
-  @include sizeStyle($h: auto, $w: 100%);
+  @include sizeStyle($h: 100dvh, $w: 100%);
   @include dFlex($jc: flex-start, $fd: column, $g: 24px);
   @include padding($p: 90px 0 36px 0);
   max-width: unset !important;
