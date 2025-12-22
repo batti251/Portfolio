@@ -85,6 +85,15 @@ a {
   color: $secondary;
 }
 
+.mat-mdc-form-field input:-webkit-autofill,
+.mat-mdc-form-field textarea:-webkit-autofill
+{
+  -webkit-box-shadow: 0 0 0 1000px $secondary inset !important;
+  -webkit-text-fill-color: $primary !important;
+  caret-color: $highlight;
+}
+
+
 h1 {
   @include textStyle($ff: "Syne", $fw: 800, $fst: bold, $fs: 8rem);
 }
@@ -117,11 +126,6 @@ h2 {
   max-width: 1920px;
 }
 
-@media screen and (min-width: 1920px) {
-  h1 {
-    font-size: 12rem !important;
-  }
-}
 
 @media screen and (max-width: 1200px) {
   h1 {
@@ -168,6 +172,12 @@ h2 {
 @media screen and (max-width: 360px) {
   h2 {
     font-size: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  h2 {
+    font-size: 1.75rem !important;
   }
 }
 
