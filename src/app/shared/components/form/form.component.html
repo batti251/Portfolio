@@ -20,6 +20,7 @@
         matInput
         placeholder=""
         required
+        pattern=".*\S.*"
         #name="ngModel"
       />
     </mat-form-field>
@@ -44,7 +45,7 @@
         name="email"
         autocomplete="new-email"
         placeholder="you@example.com"
-        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        pattern="[a-zA-Z0-9._%+\-]+@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}"
         required
         #mail="ngModel"
       />
@@ -72,6 +73,7 @@
         matInput
         minlength="5"
         placeholder="Happy to hear from you"
+        pattern="([\s\S]*\S){5,}[\s\S]*"
         required=""
         #message="ngModel"
       ></textarea>
