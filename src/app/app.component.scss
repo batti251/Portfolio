@@ -1,7 +1,8 @@
 @use './shared/index.scss' as *;
 
 app-header{
-    position: fixed;
+    position: sticky;
+    top: 0  ;
     z-index: 999;
     background-color: #fffcf3;
     @include dFlex();
