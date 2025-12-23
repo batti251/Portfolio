@@ -70,7 +70,6 @@ button {
 }
 
 section {
-  scroll-margin-top: 160px;
   max-width: 1920px;
   width: 90%;
 }
@@ -153,7 +152,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
   h1 {
     font-size: 3rem !important;
   }
@@ -169,13 +168,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 360px) {
-  h2 {
-    font-size: 2rem !important;
-  }
-}
-
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 380px) {
   h2 {
     font-size: 1.75rem !important;
   }

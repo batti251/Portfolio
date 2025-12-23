@@ -1,7 +1,7 @@
 @use './../shared/index' as *;
 
 app-hero {
-  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
 }

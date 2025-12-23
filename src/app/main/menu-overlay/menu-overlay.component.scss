@@ -1,8 +1,8 @@
 @use './../../shared/index' as *;
 
 ul {
-  @include sizeStyle($h: 100dvh, $w: 100%);
-  @include dFlex($fd: column);
+  @include sizeStyle($h: 100vh, $w: 100%);
+  @include dFlex($fd: column, $jc: start);
 
   > a {
     @include dFlex();

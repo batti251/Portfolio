@@ -236,4 +236,10 @@ section {
       bottom: 112px !important;
     }
   }
+
+  @media screen and (max-width: 380px) {
+    h2 {
+      font-size: 2rem !important;
+    }
+  }
 }

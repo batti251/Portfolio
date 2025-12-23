@@ -29,7 +29,7 @@ export class AppComponent implements AfterViewInit {
     this.scroller.setOffset([0, 100]);
 
     setTimeout(() => {
-    this.scroller.scrollToAnchor(id);
-  }, 100);
+      this.scroller.scrollToAnchor(id);
+    }, 200);
   }
 }
