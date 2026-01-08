@@ -21,6 +21,10 @@ export class ReferencesComponent {
     {
       name: "ozan",
       relation: "Team Partner"
+    },
+    {
+      name: "sven",
+      relation: "Team Partner"
     }
   ]
 

@@ -1,4 +1,4 @@
-@use './../../shared/index' as *;
+@use "./../../shared/index" as *;
 
 .reference-wrap {
   @include dFlex($g: 20px);
@@ -6,7 +6,7 @@
   > .reference-container {
     @include dFlex($fd: column, $g: 24px, $jc: flex-start);
     @include padding($p: 24px 16px);
-    @include sizeStyle($w: 397.33px, $h: 420px);
+    @include sizeStyle($w: 397.33px, $h: 520px);
     @include borderStyle($bw: 4px, $bc: $secondary);
     > img {
       @include sizeStyle($h: 40px, $w: 40px);
@@ -28,7 +28,6 @@
   }
 }
 
-
 @media screen and (max-width: 992px) {
   .reference-container {
     height: 600px !important;
@@ -39,8 +38,19 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .reference-wrap {
+    flex-direction: column !important;
+    padding: 0 20px !important;
+    > .reference-container {
+      height: unset !important;
+      width: 100% !important;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
-/*   section {
+  /*   section {
     padding: 0 50px !important;
   } */
 
@@ -55,7 +65,6 @@
 }
 
 @media screen and (max-height: 430px) {
-
   .reference-wrap {
     > .reference-container {
       height: 480px !important;
