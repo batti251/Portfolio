@@ -7,11 +7,10 @@ import { ReferencesComponent } from './references/references.component';
 import { ArrowComponent } from './arrow/arrow.component';
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [AboutMeComponent, ProjectsComponent, SkillsComponent, ReferencesComponent, HeroComponent, ArrowComponent],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+    selector: 'app-main',
+    imports: [AboutMeComponent, ProjectsComponent, SkillsComponent, ReferencesComponent, HeroComponent, ArrowComponent],
+    templateUrl: './main.component.html',
+    styleUrl: './main.component.scss'
 })
 export class MainComponent {
 

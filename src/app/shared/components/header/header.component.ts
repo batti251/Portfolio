@@ -5,11 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, MatButtonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+    selector: 'app-header',
+    imports: [CommonModule, MatButtonModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 
 

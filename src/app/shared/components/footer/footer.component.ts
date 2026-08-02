@@ -13,11 +13,10 @@ import { FormComponent } from '../form/form.component';
 import { SubmitMessageComponent } from '../submit-message/submit-message.component';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule, FormComponent, SubmitMessageComponent, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule, TranslatePipe],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+    selector: 'app-footer',
+    imports: [CommonModule, FormComponent, SubmitMessageComponent, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule, TranslatePipe],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 

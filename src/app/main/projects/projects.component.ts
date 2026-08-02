@@ -5,11 +5,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [MatButtonModule, CommonModule, TranslatePipe],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [MatButtonModule, CommonModule, TranslatePipe],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
   @ViewChildren('elements', { read: ElementRef })
