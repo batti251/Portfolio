@@ -1,8 +1,8 @@
 👉 https://sebastian-buenz.de/
 
-# 🌐 Portfolio – Angular 17
+# 🌐 Portfolio – Angular 22
 
-This is my personal **portfolio website**, built with **Angular 17**, showcasing my projects, skills, and frontend development experience.  
+This is my personal **portfolio website**, built with **Angular 22**, showcasing my projects, skills, and frontend development experience.  
 The focus lies on clean architecture, component-based design, and modern Angular best practices.
 
 ---
@@ -18,7 +18,7 @@ The focus lies on clean architecture, component-based design, and modern Angular
 
 ## 🛠️ Tech Stack
 
-- **Angular 17** (CLI: 17.3.17)
+- **Angular 22** (CLI: 22.1.2)
 - **TypeScript**
 - **HTML5 & SCSS**
 - **Angular Material**
