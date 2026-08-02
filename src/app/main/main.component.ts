@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { HeroComponent } from "./hero/hero.component";
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -10,6 +10,7 @@ import { ArrowComponent } from './arrow/arrow.component';
     selector: 'app-main',
     imports: [AboutMeComponent, ProjectsComponent, SkillsComponent, ReferencesComponent, HeroComponent, ArrowComponent],
     templateUrl: './main.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './main.component.scss'
 })
 export class MainComponent {

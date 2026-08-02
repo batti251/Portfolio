@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Input } from '@angular/core';
 import { TranslatePipe } from "@ngx-translate/core";
 
@@ -6,6 +6,7 @@ import { TranslatePipe } from "@ngx-translate/core";
     selector: 'app-submit-message',
     imports: [TranslatePipe],
     templateUrl: './submit-message.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './submit-message.component.scss'
 })
 export class SubmitMessageComponent {

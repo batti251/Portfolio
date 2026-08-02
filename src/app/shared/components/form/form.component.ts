@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +18,7 @@ import { Output } from '@angular/core';
     selector: 'app-form',
     imports: [MatSelectModule, MatButtonModule, MatIconModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, TranslatePipe, FormsModule],
     templateUrl: './form.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './form.component.scss'
 })
 export class FormComponent {

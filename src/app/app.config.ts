@@ -7,14 +7,14 @@ import { routes } from './app.routes';
 
 import { provideTranslateService, provideTranslateLoader } from "@ngx-translate/core";
 import { provideTranslateHttpLoader } from "@ngx-translate/http-loader";
-import { provideHttpClient } from "@angular/common/http";
+import { provideHttpClient, withXhr } from "@angular/common/http";
 
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes, withInMemoryScrolling({
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled'
-  })), provideAnimations(), provideHttpClient(),
+  })), provideAnimations(), provideHttpClient(withXhr()),
   provideTranslateService({
     lang: 'en-GB',
     fallbackLang: 'en-GB',

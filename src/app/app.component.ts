@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ApplicationRef, inject } from '@angular/core';
+import { Component, AfterViewInit, ApplicationRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter, take } from 'rxjs';
@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     selector: 'app-root',
     imports: [RouterOutlet, HeaderComponent, FooterComponent],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {

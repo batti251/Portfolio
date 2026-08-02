@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, OnInit, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren, OnInit, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -8,6 +8,7 @@ import { TranslatePipe } from "@ngx-translate/core";
     selector: 'app-projects',
     imports: [MatButtonModule, CommonModule, TranslatePipe],
     templateUrl: './projects.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {

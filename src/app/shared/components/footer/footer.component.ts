@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
@@ -16,6 +16,7 @@ import { SubmitMessageComponent } from '../submit-message/submit-message.compone
     selector: 'app-footer',
     imports: [CommonModule, FormComponent, SubmitMessageComponent, MatFormFieldModule, MatSelectModule, MatIconModule, MatInputModule, MatCheckboxModule, MatCardModule, TranslatePipe],
     templateUrl: './footer.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
