@@ -10,11 +10,11 @@ form {
   > p {
     > .mat-mdc-form-field {
       width: 600px;
-      --mdc-outlined-text-field-focus-outline-color: #ff9900;
-      --mdc-outlined-text-field-caret-color: #ff9900;
-      --mdc-outlined-text-field-label-text-color: #ff9900;
-      --mdc-outlined-text-field-hover-label-text-color: #ff9900;
-      --mdc-outlined-text-field-focus-label-text-color: #ff9900;
+      --mat-form-field-outlined-focus-outline-color: #ff9900;
+      --mat-form-field-outlined-caret-color: #ff9900;
+      --mat-form-field-outlined-label-text-color: #ff9900;
+      --mat-form-field-outlined-hover-label-text-color: #ff9900;
+      --mat-form-field-outlined-focus-label-text-color: #ff9900;
     }
 
     .textarea {
