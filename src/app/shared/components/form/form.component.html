@@ -1,27 +1,20 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+<form (submit)="onSubmit()" [formGroup]="contactForm">
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="name" name="name">
-       @if (!name.valid && !name.pristine){
-          {{
-        "footer.form1.error" | translate
-      }}
-        } @else  {
-        {{
-        "footer.form1" | translate
-      }}
+        @if (name?.invalid && !name.pristine) {
+          {{ "footer.form1.error" | translate }}
+        } @else {
+          {{ "footer.form1" | translate }}
         }
       </mat-label>
       <input
-        [(ngModel)]="newMessage.name"
+        formControlName="name"
         type="name"
-        name="name"
         autocomplete="new-name"
         matInput
-        placeholder=""
+        placeholder="{{'footer.name.placeholder' | translate}}"
         required
-        pattern=".*\S.*"
-        #name="ngModel"
       />
     </mat-form-field>
   </p>
@@ -29,25 +22,18 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="email" name="email">
-         @if (!mail.valid && !mail.pristine){
-          {{
-        "footer.form2.error" | translate
-      }}
-        } @else  {
-        {{
-        "footer.form2" | translate
-      }}
-        }</mat-label>
+        @if (email?.invalid && !email.pristine) {
+          {{ "footer.form2.error" | translate }}
+        } @else {
+          {{ "footer.form2" | translate }}
+        }
+      </mat-label>
       <input
-        [(ngModel)]="newMessage.email"
+        formControlName="email"
         matInput
         type="email"
-        name="email"
         autocomplete="new-email"
-        placeholder="you@example.com"
-        pattern="[a-zA-Z0-9._%+\-]+@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,}"
-        required
-        #mail="ngModel"
+        placeholder="{{'footer.email.placeholder' | translate}}"
       />
     </mat-form-field>
   </p>
@@ -55,36 +41,39 @@
   <p>
     <mat-form-field appearance="outline">
       <mat-label for="message" name="message">
-        @if (!message.valid && !message.pristine){
-          {{
-        "footer.form3.error" | translate
-      }}
+        @if (message?.invalid && !message.pristine) {
+          {{ "footer.form3.error" | translate }}
         } @else {
-        {{
-        "footer.form3" | translate
-      }}
-      }
-    </mat-label>
+          {{ "footer.form3" | translate }}
+        }
+      </mat-label>
       <textarea
-      class="textarea"
-        [(ngModel)]="newMessage.message"
-        name="message"
+        class="textarea"
+        formControlName="message"
         matInput
-        minlength="5"
-        placeholder="Happy to hear from you"
-        pattern="([\s\S]*\S){5,}[\s\S]*"
-        required=""
-        #message="ngModel"
+        placeholder="{{'footer.message.placeholder' | translate}}"
       ></textarea>
     </mat-form-field>
   </p>
   <p class="checkbox-caption">
-    <mat-checkbox class="checkbox" [(ngModel)]="policy" name="policy"></mat-checkbox>
+    <label for="policy"></label>
+    <mat-checkbox
+      class="checkbox"
+      formControlName="policy"
+    ></mat-checkbox>
     <span>{{ "footer.policy.text1" | translate }}</span>
-    <a href="privacy" target="_blank" rel="noopener noreferrer" class="text-highlight">{{
-      "footer.policy.highlight" | translate
-    }}</a>
-     <span>{{ "footer.policy.text2" | translate }}</span>
+    <a
+      href="privacy"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-highlight"
+      >{{ "footer.policy.highlight" | translate }}</a
+    >
+    <span>{{ "footer.policy.text2" | translate }}</span>
   </p>
-    <input class="button" type="submit" value="Send Email" [disabled]="!policy || !contactForm.valid"/>
+  <button
+    class="button"
+    type="submit"
+    [disabled]="contactForm.invalid"
+  >Send Email</button>
 </form>
