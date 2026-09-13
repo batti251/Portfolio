@@ -62,6 +62,13 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
 
   projects = [{
+    title: 'Personal Workbook',
+    skills: ['Angular', 'On Progress', 'Supabase',],
+    imgsrc: './../../../assets/img/thumbnail/workbook.png',
+    git: 'https://github.com/batti251/engineering-workbook',
+    url: 'https://doc.sebastian-buenz.de/'
+  },
+  {
     title: 'Join',
     skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
     imgsrc: './../../../assets/img/thumbnail/join.png',
